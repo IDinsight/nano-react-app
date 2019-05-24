@@ -2,8 +2,35 @@ import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import AppNavigator from './navigation/AppNavigator';
+import { withAuthenticator } from 'aws-amplify-react-native';
+import Amplify, { Analytics, Auth } from 'aws-amplify';
 
-export default class App extends React.Component {
+import awsconfig from './aws-exports';
+
+// retrieve temporary AWS credentials and sign requests
+Amplify.configure(awsconfig);
+// send analytics events to Amazon Pinpoint
+
+Analytics.autoTrack('session', {
+    // REQUIRED, turn on/off the auto tracking
+    enable: true,
+    // OPTIONAL, the attributes of the event, you can either pass an object or a function 
+    // which allows you to define dynamic attributes
+    // attributes: {
+    //     attr: 'attr'
+    // },
+    // when using function
+    // attributes: () => {
+    //    const attr = somewhere();
+    //    return {
+    //        myAttr: attr
+    //    }
+    // },
+    // OPTIONAL, the service provider, by default is the AWS Pinpoint
+    provider: 'AWSPinpoint'
+});
+
+class App extends React.Component {
   state = {
     isLoadingComplete: false,
   };
@@ -36,9 +63,6 @@ export default class App extends React.Component {
       Font.loadAsync({
         // This is the font that we are using for our tab bar
         ...Icon.Ionicons.font,
-        // We include SpaceMono because we use it in HomeScreen.js. Feel free
-        // to remove this if you are not using it in your app
-        'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
       }),
     ]);
   };
@@ -54,9 +78,13 @@ export default class App extends React.Component {
   };
 }
 
+// export default withAuthenticator(App);
+export default App;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
   },
 });
+

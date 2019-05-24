@@ -17,6 +17,11 @@ export default class HomeScreen extends React.Component {
 
   render() {
     const {navigate} = this.props.navigation;
+    const data = {
+      user: {
+        chiefName: 'Mukobela',
+      }
+    };
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -29,7 +34,7 @@ export default class HomeScreen extends React.Component {
 
           <View style={styles.getStartedContainer}>
 
-            <Text style={styles.getStartedText}>Muli buti ba Mwami ba Mukobela!</Text>
+            <Text style={styles.getStartedText}>Muli buti ba Mwami ba {data.user.chiefName}!</Text>
 
           </View>
 
@@ -60,16 +65,6 @@ export default class HomeScreen extends React.Component {
       </View>
     );
   }
-
-  _onPressLearnMore = () => {
-    
-  };
-
-  _handleHelpPress = () => {
-    WebBrowser.openBrowserAsync(
-      'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
-    );
-  };
 
 }
 
@@ -108,11 +103,11 @@ const styles = StyleSheet.create({
     marginVertical: 7,
   },
   buttonGroupContainer: {
-    marginTop: 40,
+    marginTop: 10,
     alignItems: 'center'
   },
   buttonContainer: {
-    marginTop: 30,
+    marginTop: 50,
     width: '50%'
   },
   codeHighlightText: {
@@ -158,7 +153,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   helpContainer: {
-    marginTop: 30,
+    marginTop: 50,
     alignItems: 'center',
   },
   helpLink: {
