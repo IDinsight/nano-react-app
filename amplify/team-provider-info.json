@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "nano-dev-20190520201652-authRole",
+            "UnauthRoleArn": "arn:aws:iam::678681925278:role/nano-dev-20190520201652-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::678681925278:role/nano-dev-20190520201652-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "nano-dev-20190520201652-deployment",
+            "UnauthRoleName": "nano-dev-20190520201652-unauthRole",
+            "StackName": "nano-dev-20190520201652",
+            "StackId": "arn:aws:cloudformation:us-east-1:678681925278:stack/nano-dev-20190520201652/bcc31fb0-7b5d-11e9-a5b6-120fc18a2440"
+        },
+        "categories": {
+            "auth": {
+                "cognito9c002fef": {}
+            }
+        }
+    }
+}

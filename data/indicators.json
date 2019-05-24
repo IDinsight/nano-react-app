@@ -1,0 +1,317 @@
+{
+  "snapshot_of_the_chiefdom": {
+    "name": "Snapshot of the Chiefdom",
+    "categories": [
+      
+    ],
+    "indicators": [
+      {
+        "indic_name": "hh_size",
+        "indic_label": "Average household size",
+        "values": {
+          "chiefdom": {
+            "estimate": 5.506117343902588,
+            "upper_bound": 5.802863597869873,
+            "lower_bound": 5.2093706130981445,
+            "unit": ""
+          },
+          "vc": [
+            
+          ]
+        }
+      },
+      {
+        "indic_name": "female_hh_head",
+        "indic_label": "Percent of households with female head",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.2273636907339096,
+            "upper_bound": 0.25708186626434326,
+            "lower_bound": 0.19764553010463715,
+            "unit": "%"
+          },
+          "vc": [
+            
+          ]
+        }
+      },
+      {
+        "indic_name": "literacy_test",
+        "indic_label": "Percent of respondents who can read and write",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.7503663897514343,
+            "upper_bound": 0.7893766164779663,
+            "lower_bound": 0.7113561630249023,
+            "unit": "%"
+          },
+          "vc": [
+            {
+              "vc_code": 0,
+              "vc_name": "Chiefdom",
+              "estimate": 0.750366404552288,
+              "upper_bound": 0.78937313756056,
+              "lower_bound": 0.7113596715440159
+            },
+            {
+              "vc_code": 7,
+              "vc_name": "Chibunze",
+              "estimate": 0.5844246237591632,
+              "upper_bound": 0.7257304434082437,
+              "lower_bound": 0.4533173932998237
+            },
+            {
+              "vc_code": 8,
+              "vc_name": "Nakalongwe",
+              "estimate": 0.5882352941176471,
+              "upper_bound": 0.6703868698082,
+              "lower_bound": 0.5060837184270942
+            },
+            {
+              "vc_code": 4,
+              "vc_name": "Kawilizhi",
+              "estimate": 0.640190595180276,
+              "upper_bound": 0.7723906936116195,
+              "lower_bound": 0.4962489001400381
+            },
+            {
+              "vc_code": 6,
+              "vc_name": "Kalundu",
+              "estimate": 0.7499751098516719,
+              "upper_bound": 0.8208268223436987,
+              "lower_bound": 0.6778147997410614
+            },
+            {
+              "vc_code": 1,
+              "vc_name": "Ngabo",
+              "estimate": 0.7551734763731174,
+              "upper_bound": 0.8391262320590522,
+              "lower_bound": 0.6732360751033226
+            },
+            {
+              "vc_code": 3,
+              "vc_name": "Baambwe",
+              "estimate": 0.7676862776596509,
+              "upper_bound": 0.827379117170606,
+              "lower_bound": 0.7101793979773822
+            },
+            {
+              "vc_code": 2,
+              "vc_name": "Inongwe",
+              "estimate": 0.7958329992456245,
+              "upper_bound": 0.8886033197275051,
+              "lower_bound": 0.7062923380703039
+            },
+            {
+              "vc_code": 5,
+              "vc_name": "Shamutonko",
+              "estimate": 0.8219256145285491,
+              "upper_bound": 0.9112731806061045,
+              "lower_bound": 0.7359371786203629
+            }
+          ]
+        }
+      },
+      {
+        "indic_name": "hh_size_under_5",
+        "indic_label": "Percent of households with a member younger than 5 years",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.6787979602813721,
+            "upper_bound": 0.7167327404022217,
+            "lower_bound": 0.6408632397651672,
+            "unit": "%"
+          },
+          "vc": [
+            
+          ]
+        }
+      },
+      {
+        "indic_name": "hh_size_5_to_18",
+        "indic_label": "Percent of households with a member aged 5-17 years",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.7359127402305603,
+            "upper_bound": 0.7758914232254028,
+            "lower_bound": 0.695933997631073,
+            "unit": "%"
+          },
+          "vc": [
+            
+          ]
+        }
+      },
+      {
+        "indic_name": "weather_resist",
+        "indic_label": "Percent of households with a weather resistant roof",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.21389789879322052,
+            "upper_bound": 0.2565214931964874,
+            "lower_bound": 0.1712743192911148,
+            "unit": "%"
+          },
+          "vc": [
+            
+          ]
+        }
+      },
+      {
+        "indic_name": "hh_surveyed",
+        "indic_label": "Total households surveyed during data collection",
+        "values": {
+          "chiefdom": {
+            "estimate": 1.0,
+            "upper_bound": 1.0,
+            "lower_bound": 1.0,
+            "unit": ""
+          },
+          "vc": [
+            
+          ]
+        }
+      }
+    ]
+  },
+  "access_to_services": {
+    "name": "Access to Services",
+    "categories": [
+      {
+        "cat_name": "water_sources",
+        "cat_label": "Water Sources"
+      },
+      {
+        "cat_name": "education",
+        "cat_label": "Education"
+      }
+    ],
+    "indicators": {
+      "water_sources": [
+        {
+          "indic_name": "wat_drink_borehole",
+          "indic_label": "Borehole/tubehole",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.4224821627140045,
+              "upper_bound": 0.5149213075637817,
+              "lower_bound": 0.3300430476665497,
+              "unit": "%"
+            },
+            "vc": [
+              
+            ]
+          }
+        },
+        {
+          "indic_name": "wat_drink_other",
+          "indic_label": "Other",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.1228158250451088,
+              "upper_bound": 0.16194072365760803,
+              "lower_bound": 0.08369092643260956,
+              "unit": "%"
+            },
+            "vc": [
+              
+            ]
+          }
+        },
+        {
+          "indic_name": "wat_drink_prot_dug",
+          "indic_label": "Protected dughole",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.16327378153800964,
+              "upper_bound": 0.21098840236663818,
+              "lower_bound": 0.1155591756105423,
+              "unit": "%"
+            },
+            "vc": [
+              
+            ]
+          }
+        },
+        {
+          "indic_name": "wat_drink_unprot_dug",
+          "indic_label": "Unprotected dughole",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.29142820835113525,
+              "upper_bound": 0.3701232373714447,
+              "lower_bound": 0.212733194231987,
+              "unit": "%"
+            },
+            "vc": [
+              
+            ]
+          }
+        },
+        {
+          "indic_name": "wat_loc_dwelling",
+          "indic_label": "Own dwelling",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.05967191979289055,
+              "upper_bound": 0.0976729542016983,
+              "lower_bound": 0.021670885384082794,
+              "unit": "%"
+            },
+            "vc": [
+              
+            ]
+          }
+        },
+        {
+          "indic_name": "wat_loc_other_village",
+          "indic_label": "Other village",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.25198113918304443,
+              "upper_bound": 0.31599900126457214,
+              "lower_bound": 0.18796327710151672,
+              "unit": "%"
+            },
+            "vc": [
+              
+            ]
+          }
+        },
+        {
+          "indic_name": "wat_loc_village",
+          "indic_label": "Own village",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.48807021975517273,
+              "upper_bound": 0.5443316698074341,
+              "lower_bound": 0.431808739900589,
+              "unit": "%"
+            },
+            "vc": [
+              
+            ]
+          }
+        },
+        {
+          "indic_name": "wat_loc_yard",
+          "indic_label": "Own yard/plot",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.200276717543602,
+              "upper_bound": 0.2515256702899933,
+              "lower_bound": 0.1490277647972107,
+              "unit": "%"
+            },
+            "vc": [
+              
+            ]
+          }
+        }
+      ],
+      "education": [
+        
+      ]
+    }
+  }
+}

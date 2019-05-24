@@ -1,14 +1,3 @@
-const surveys = [
- {
-    name: 'Mini-census',
-    date: 'April 2019'
- },
- {
-    name: 'Access to services',
-    date: 'April 2019'
- },
-]
-
 import React from 'react';
 import { ScrollView, StyleSheet, View, List } from 'react-native';
 import { Card, ListItem, Button, Icon } from 'react-native-elements';
@@ -20,12 +9,31 @@ export default class ViewScreen extends React.Component {
 
   render() {
     const {navigate} = this.props.navigation;
+    const data = {
+      modules: [
+        {
+          key: 'snapshot_of_the_chiefdom',
+          name: 'Snapshot of the Chiefdom',
+          date: 'April 2019'
+        },
+        // {
+        //   key: 'access_to_services',
+        //   name: 'Access to Services',
+        //   date: 'April 2019'
+        // },
+        // {
+        //   key: 'health_behaviors',
+        //   name: 'Health Behaviors',
+        //   date: 'April 2019'
+        // },
+      ]
+    };
+
     return (
       <ScrollView style={styles.container}>
       <View style={styles.listContainer}>
         {
-          surveys.map((u, i) => {
-            // dateText = 'Collected ' + {u.date}
+          data.modules.map((u, i) => {
             return (
               <ListItem
                 key={i}
@@ -33,7 +41,7 @@ export default class ViewScreen extends React.Component {
                 subtitle={'Collected '+u.date}
                 chevron={{color: '#2e78b7'}}
                 bottomDivider={true}
-                onPress={() => navigate('Home')}
+                onPress={() => navigate('Module', {moduleKey: u.key})}
               />
             );
           })

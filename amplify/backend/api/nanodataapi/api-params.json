@@ -1,0 +1,39 @@
+{
+    "paths": [
+        {
+            "name": "/data",
+            "lambdaFunction": "nano952f2cb8",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/GET",
+                    "/PUT",
+                    "/PATCH"
+                ]
+            }
+        }
+    ],
+    "resourceName": "nanodataapi",
+    "apiName": "nanodataapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "nano952f2cb8"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "nano-dev-20190520201652-authRole",
+        "unAuthRoleName": "nano-dev-20190520201652-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "nano952f2cb8",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
