@@ -43,17 +43,8 @@ const colours = {
   brown: 'brown'
 }
 
-// const data = [
-//   {frequency: 5, letter: 'a'},
-//   {frequency: 6, letter: 'b'},
-//   {frequency: 4, letter: 'c'},
-//   {frequency: 1, letter: 'd'},
-//   {frequency: 2, letter: 'e'},
-//   {frequency: 3, letter: 'f'}
-// ];
 
-
-export default class Chart extends React.Component {
+export default class ReasonsChart extends React.Component {
 
   constructor(props) {
     super(props);
@@ -87,6 +78,17 @@ export default class Chart extends React.Component {
       f = d3Format(".0%");
       return f(value)
     }
+    else {
+      f = d3Format(".1f");
+      return f(value)
+    }
+  }
+  
+  formatLabel(name,value,unit) {
+    if (unit==='%') {
+      f = d3Format(".1%");
+      return f(value)
+    }
     else if (name==='hh_surveyed') {
       f = d3Format("d");
       return f(value);
@@ -99,17 +101,26 @@ export default class Chart extends React.Component {
 
   render() {
     const screen = Dimensions.get('window');
-    const margin = {top: 50, right: 25, bottom: 200, left: 105}
-    const width = screen.width - margin.left - margin.right
-    const height = screen.height - margin.top - margin.bottom
-    const data = this.props.data.values.vc;
-    const unit = this.props.data.values.chiefdom.unit;
-    const indic_name = this.props.data.indic_name;
+    const margin = {top: 90, right: 55, bottom: 300, left: 300};
+    const width = screen.width - margin.left - margin.right;
+    const height = screen.height - margin.top - margin.bottom;
+    const data = this.props.data.reasons.reasons_indicators;
+    const unit = this.props.data.reasons.unit;
+    const cat_name = this.props.data.reasons.reasons_label;
+
+    let xAxisLabel;
+
+    if (cat_name==='r1_literacy_test') {
+      xAxisLabel = 'Percent of respondents';
+    }
+    else {
+      xAxisLabel = 'Percent of households';
+    }
 
     const y = d3.scale.scaleBand()
       .rangeRound([0, height])
       .padding(0.1)
-      .domain(data.map(d => d.vc_code))
+      .domain(data.map(d => d.indic_name))
 
     const maxX = max(data, d => d.upper_bound*1.2)
 
@@ -117,9 +128,9 @@ export default class Chart extends React.Component {
       .rangeRound([0, width])
       .domain([0, maxX])
 
-    const firstLetterY = y(data[0].vc_code)
-    const secondLetterY = y(data[1].vc_code)
-    const lastLetterY = y(data[data.length - 1].vc_code)
+    const firstLetterY = y(data[0].indic_name)
+    const secondLetterY = y(data[1].indic_name)
+    const lastLetterY = y(data[data.length - 1].indic_name)
     const labelDy = (secondLetterY - firstLetterY) / 2
 
     const leftAxis = [lastLetterY + labelDy, firstLetterY - labelDy]
@@ -152,19 +163,19 @@ export default class Chart extends React.Component {
             {
             data.map((d, i) =>(
               <Group
-                y={y(d.vc_code)}
+                y={y(d.indic_name)}
                 x={0}
                 key={i + 1}
               >
                 <Shape d={this.drawLine(-notch, 0)} stroke={colours.black}/>
                 <Text
-                  y={-9}
-                  x={-9}
+                  y={-15}
+                  x={-15}
                   fill={colours.black}
-                  font="14px Arial"
+                  font="24px Arial"
                   alignment="right"
                 >
-                  {d.vc_name + emptySpace}
+                  {d.indic_label + emptySpace}
                 </Text>
               </Group>
             ))
@@ -180,21 +191,32 @@ export default class Chart extends React.Component {
                   fill={colours.black}
                   x={0}
                   y={labelDistance}
-                  font="12px Arial"
+                  font="20px Arial"
                   alignment='center'
                 >
-                  {this.formatValue(indic_name,d,unit)}
+                  {this.formatValue(cat_name,d,unit)}
                 </Text>
               </Group>
             ))
             }
+            <Group y={height} x={width/2}>
+                <Text
+                  fill={colours.black}
+                  x={0}
+                  y={-20}
+                  font="24px Arial"
+                  alignment='center'
+                >
+                {xAxisLabel}
+                </Text>
+            </Group>
           </Group>
           {
           data.map((d, i) => (
             
-            <Group x={x(d.lower_bound)} y={y(d.vc_code)} key={i} >
+            <Group x={x(d.lower_bound < 0 ? 0 : d.lower_bound)} y={y(d.indic_name)} key={i} >
               <Shape
-                d={this.drawLine(x(d.upper_bound - d.lower_bound),0)}
+                d={this.drawLine(x(d.upper_bound - (d.lower_bound < 0 ? 0 : d.lower_bound)),0)}
                 strokeWidth={3}
                 stroke={'rgb(200,200,200'}
               >
@@ -206,12 +228,22 @@ export default class Chart extends React.Component {
           {
           data.map((d, i) => (
             
-            <Group x={x(d.estimate)} y={y(d.vc_code)} key={i} >
+            <Group x={x(d.estimate)} y={y(d.indic_name)} key={i} >
               <Shape
                 d={this.drawCircle(y.bandwidth())}
                 fill={'#4088d5'}
               >
               </Shape>
+              <Text
+                fill={colours.black}
+                x={0}
+                y={-35}
+                font="20px Arial"
+                alignment='center'
+              >
+                {this.formatLabel(cat_name,d.estimate,unit)}
+
+              </Text>
             </Group>
           ))
           }
@@ -228,7 +260,7 @@ const styles = {
     margin: 20,
   },
   label: {
-    fontSize: 15,
+    fontSize: 12,
     marginTop: 5,
     fontWeight: 'normal',
   }

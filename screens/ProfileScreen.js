@@ -5,14 +5,18 @@ import {
   Text,
   View,
   Button,
-  AsyncStorage
+  AsyncStorage,
+  TouchableOpacity
 } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { Auth } from 'aws-amplify';
+import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
 
 export default class ProfileScreen extends React.Component {
   static navigationOptions = {
     title: 'Profile',
+    headerTitleStyle: {fontSize:32},
+    headerStyle: {height:80}
   };
 
   format_data = (value) => {
@@ -51,7 +55,7 @@ export default class ProfileScreen extends React.Component {
         },
         {
           label: 'Email Address',
-          value: 'wesleymukobela@gmail.com',
+          value: 'wesleymukobela@yahoo.com',
         }
       ]
     };
@@ -64,9 +68,8 @@ export default class ProfileScreen extends React.Component {
             return (
               <ListItem
                 key={i}
-                title={item.label}
-                subtitle={this.format_data(item.value)}
-                subtitleStyle={{fontSize:20}}
+                title={<View><Text style={styles.titleStyle}>{item.label}</Text></View>}
+                subtitle={<View><Text style={styles.subtitleStyle}>{this.format_data(item.value)}</Text></View>}
                 bottomDivider={false}
               />
             );
@@ -75,11 +78,12 @@ export default class ProfileScreen extends React.Component {
         </View>
         <View style={styles.welcomeContainer}>
           <View style={styles.buttonContainer}>
-            <Button 
-              title="Sign Out" 
-              color="#4088d5" 
+            <TouchableOpacity
+              style={styles.customButton}
               onPress={this._signOutAsync} 
-            />
+              >
+              <Text style={styles.customButtonText}>SIGN OUT</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -87,30 +91,46 @@ export default class ProfileScreen extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
+    paddingTop: '25@vs',
     backgroundColor: '#fff',
   },
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-    marginTop: 50
+  listContainer: {
+    marginHorizontal: '15@s',
+  },
+  titleStyle: {
+    fontSize:'14@ms',
+  },
+  subtitleStyle: {
+    color: 'rgba(96,100,109, 1)',
+    fontSize:'17@ms',
   },
   getStartedText: {
-    fontSize: 17,
+    fontSize: '17@ms',
     color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
+    lineHeight: '24@ms',
     textAlign: 'center',
   },
   buttonContainer: {
-    marginTop: 30,
+    marginTop: '30@vs',
     width: '50%',
   },
   welcomeContainer: {
     alignItems: 'center',
-    marginTop: 0,
-    marginBottom: 20,
+    marginBottom: '20@vs',
+  },
+  customButtonText: {
+    fontSize: '16@ms',
+    fontWeight: '600',
+    color: "#fff",
+  },
+  customButton: {
+    alignItems: 'center',
+    backgroundColor: "#4088d5",
+    paddingVertical: '10@ms',
+    borderRadius: 3,
+    elevation: 3
   },
 });

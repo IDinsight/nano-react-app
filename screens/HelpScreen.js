@@ -1,10 +1,13 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, Text } from 'react-native';
 import {Linking} from 'react-native'
+import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
 
 export default class HelpScreen extends React.Component {
   static navigationOptions = {
     title: 'Get Help',
+    headerTitleStyle: {fontSize:32},
+    headerStyle: {height:80}
   };
 
   render() {
@@ -18,24 +21,24 @@ export default class HelpScreen extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     flex: 1,
-    paddingTop: 35,
+    paddingTop: '35@vs',
     backgroundColor: '#fff',
   },
   getStartedContainer: {
-    marginHorizontal: 20,
+    marginHorizontal: '20@s',
   },
   getStartedText: {
-    fontSize: 17,
+    fontSize: '17@ms',
     color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    marginBottom:15
+    lineHeight: '24@ms',
+    marginBottom:'15@vs'
   },
   linkText: {
-    fontSize: 17,
+    fontSize: '17@ms',
     color: '#2e78b7',
-    marginBottom:15
+    marginBottom:'15@vs'
   },
 });

@@ -4,198 +4,34 @@
     "categories": [
       
     ],
-    "indicators": [
-      {
-        "indic_name": "hh_size",
-        "indic_label": "Average household size",
-        "values": {
-          "chiefdom": {
-            "estimate": 5.506117343902588,
-            "upper_bound": 5.802863597869873,
-            "lower_bound": 5.2093706130981445,
-            "unit": ""
-          },
-          "vc": [
-            
-          ]
-        }
-      },
-      {
-        "indic_name": "female_hh_head",
-        "indic_label": "Percent of households with female head",
-        "values": {
-          "chiefdom": {
-            "estimate": 0.2273636907339096,
-            "upper_bound": 0.25708186626434326,
-            "lower_bound": 0.19764553010463715,
-            "unit": "%"
-          },
-          "vc": [
-            
-          ]
-        }
-      },
-      {
-        "indic_name": "literacy_test",
-        "indic_label": "Percent of respondents who can read and write",
-        "values": {
-          "chiefdom": {
-            "estimate": 0.7503663897514343,
-            "upper_bound": 0.7893766164779663,
-            "lower_bound": 0.7113561630249023,
-            "unit": "%"
-          },
-          "vc": [
-            {
-              "vc_code": 0,
-              "vc_name": "Chiefdom",
-              "estimate": 0.750366404552288,
-              "upper_bound": 0.78937313756056,
-              "lower_bound": 0.7113596715440159
-            },
-            {
-              "vc_code": 7,
-              "vc_name": "Chibunze",
-              "estimate": 0.5844246237591632,
-              "upper_bound": 0.7257304434082437,
-              "lower_bound": 0.4533173932998237
-            },
-            {
-              "vc_code": 8,
-              "vc_name": "Nakalongwe",
-              "estimate": 0.5882352941176471,
-              "upper_bound": 0.6703868698082,
-              "lower_bound": 0.5060837184270942
-            },
-            {
-              "vc_code": 4,
-              "vc_name": "Kawilizhi",
-              "estimate": 0.640190595180276,
-              "upper_bound": 0.7723906936116195,
-              "lower_bound": 0.4962489001400381
-            },
-            {
-              "vc_code": 6,
-              "vc_name": "Kalundu",
-              "estimate": 0.7499751098516719,
-              "upper_bound": 0.8208268223436987,
-              "lower_bound": 0.6778147997410614
-            },
-            {
-              "vc_code": 1,
-              "vc_name": "Ngabo",
-              "estimate": 0.7551734763731174,
-              "upper_bound": 0.8391262320590522,
-              "lower_bound": 0.6732360751033226
-            },
-            {
-              "vc_code": 3,
-              "vc_name": "Baambwe",
-              "estimate": 0.7676862776596509,
-              "upper_bound": 0.827379117170606,
-              "lower_bound": 0.7101793979773822
-            },
-            {
-              "vc_code": 2,
-              "vc_name": "Inongwe",
-              "estimate": 0.7958329992456245,
-              "upper_bound": 0.8886033197275051,
-              "lower_bound": 0.7062923380703039
-            },
-            {
-              "vc_code": 5,
-              "vc_name": "Shamutonko",
-              "estimate": 0.8219256145285491,
-              "upper_bound": 0.9112731806061045,
-              "lower_bound": 0.7359371786203629
-            }
-          ]
-        }
-      },
-      {
-        "indic_name": "hh_size_under_5",
-        "indic_label": "Percent of households with a member younger than 5 years",
-        "values": {
-          "chiefdom": {
-            "estimate": 0.6787979602813721,
-            "upper_bound": 0.7167327404022217,
-            "lower_bound": 0.6408632397651672,
-            "unit": "%"
-          },
-          "vc": [
-            
-          ]
-        }
-      },
-      {
-        "indic_name": "hh_size_5_to_18",
-        "indic_label": "Percent of households with a member aged 5-17 years",
-        "values": {
-          "chiefdom": {
-            "estimate": 0.7359127402305603,
-            "upper_bound": 0.7758914232254028,
-            "lower_bound": 0.695933997631073,
-            "unit": "%"
-          },
-          "vc": [
-            
-          ]
-        }
-      },
-      {
-        "indic_name": "weather_resist",
-        "indic_label": "Percent of households with a weather resistant roof",
-        "values": {
-          "chiefdom": {
-            "estimate": 0.21389789879322052,
-            "upper_bound": 0.2565214931964874,
-            "lower_bound": 0.1712743192911148,
-            "unit": "%"
-          },
-          "vc": [
-            
-          ]
-        }
-      },
-      {
-        "indic_name": "hh_surveyed",
-        "indic_label": "Total households surveyed during data collection",
-        "values": {
-          "chiefdom": {
-            "estimate": 1.0,
-            "upper_bound": 1.0,
-            "lower_bound": 1.0,
-            "unit": ""
-          },
-          "vc": [
-            
-          ]
-        }
-      }
-    ]
-  },
-  "access_to_services": {
-    "name": "Access to Services",
-    "categories": [
-      {
-        "cat_name": "water_sources",
-        "cat_label": "Water Sources"
-      },
-      {
-        "cat_name": "education",
-        "cat_label": "Education"
-      }
+    "stakeholder_categories": [
+      "General"
     ],
     "indicators": {
-      "water_sources": [
+      "grid_data": [
         {
-          "indic_name": "wat_drink_borehole",
-          "indic_label": "Borehole/tubehole",
+          "indic_name": "r1_hh_size",
+          "indic_label": "Average household size",
           "values": {
             "chiefdom": {
-              "estimate": 0.4224821627140045,
-              "upper_bound": 0.5149213075637817,
-              "lower_bound": 0.3300430476665497,
+              "estimate": 5.506117343902588,
+              "upper_bound": 5.802863597869873,
+              "lower_bound": 5.2093706130981445,
+              "unit": ""
+            },
+            "vc": [
+              
+            ]
+          }
+        },
+        {
+          "indic_name": "r1_female_hh_head",
+          "indic_label": "Percent of households with female head",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.2273636907339096,
+              "upper_bound": 0.25708186626434326,
+              "lower_bound": 0.19764553010463715,
               "unit": "%"
             },
             "vc": [
@@ -204,13 +40,83 @@
           }
         },
         {
-          "indic_name": "wat_drink_other",
-          "indic_label": "Other",
+          "indic_name": "r1_literacy_test",
+          "indic_label": "Percent of respondents who can read and write",
           "values": {
             "chiefdom": {
-              "estimate": 0.1228158250451088,
-              "upper_bound": 0.16194072365760803,
-              "lower_bound": 0.08369092643260956,
+              "estimate": 0.750366404552288,
+              "upper_bound": 0.78937313756056,
+              "lower_bound": 0.7113596715440159,
+              "unit": "%"
+            },
+            "vc": [
+              {
+                "vc_code": 7,
+                "vc_name": "Chibunze",
+                "estimate": 0.5857340881647628,
+                "upper_bound": 0.7301203186849897,
+                "lower_bound": 0.4536290574085703
+              },
+              {
+                "vc_code": 8,
+                "vc_name": "Nakalongwe",
+                "estimate": 0.5882352941176471,
+                "upper_bound": 0.6703868698082,
+                "lower_bound": 0.5060837184270942
+              },
+              {
+                "vc_code": 4,
+                "vc_name": "Kawilizhi",
+                "estimate": 0.6431594210966414,
+                "upper_bound": 0.7718646563893259,
+                "lower_bound": 0.497062706688097
+              },
+              {
+                "vc_code": 6,
+                "vc_name": "Kalundu",
+                "estimate": 0.7504773111425844,
+                "upper_bound": 0.8234767030568566,
+                "lower_bound": 0.6785410923406782
+              },
+              {
+                "vc_code": 1,
+                "vc_name": "Ngabo",
+                "estimate": 0.7548349271719874,
+                "upper_bound": 0.8393941865526748,
+                "lower_bound": 0.6717514327580774
+              },
+              {
+                "vc_code": 3,
+                "vc_name": "Baambwe",
+                "estimate": 0.7682495073377956,
+                "upper_bound": 0.828123379364858,
+                "lower_bound": 0.7086313045340585
+              },
+              {
+                "vc_code": 2,
+                "vc_name": "Inongwe",
+                "estimate": 0.7965964010120401,
+                "upper_bound": 0.8886028341042105,
+                "lower_bound": 0.7091679619544745
+              },
+              {
+                "vc_code": 5,
+                "vc_name": "Shamutonko",
+                "estimate": 0.8206689601778224,
+                "upper_bound": 0.9108796539579979,
+                "lower_bound": 0.7319301387076944
+              }
+            ]
+          }
+        },
+        {
+          "indic_name": "r1_hh_size_under_5",
+          "indic_label": "Percent of households with a member younger than 5 years",
+          "values": {
+            "chiefdom": {
+              "estimate": 0.6787979602813721,
+              "upper_bound": 0.7167327404022217,
+              "lower_bound": 0.6408632397651672,
               "unit": "%"
             },
             "vc": [
@@ -219,13 +125,13 @@
           }
         },
         {
-          "indic_name": "wat_drink_prot_dug",
-          "indic_label": "Protected dughole",
+          "indic_name": "r1_hh_size_5_to_18",
+          "indic_label": "Percent of households with a member aged 5-17 years",
           "values": {
             "chiefdom": {
-              "estimate": 0.16327378153800964,
-              "upper_bound": 0.21098840236663818,
-              "lower_bound": 0.1155591756105423,
+              "estimate": 0.7359127402305603,
+              "upper_bound": 0.7758914232254028,
+              "lower_bound": 0.695933997631073,
               "unit": "%"
             },
             "vc": [
@@ -234,13 +140,13 @@
           }
         },
         {
-          "indic_name": "wat_drink_unprot_dug",
-          "indic_label": "Unprotected dughole",
+          "indic_name": "r1_weather_resist",
+          "indic_label": "Percent of households with a weather resistant roof",
           "values": {
             "chiefdom": {
-              "estimate": 0.29142820835113525,
-              "upper_bound": 0.3701232373714447,
-              "lower_bound": 0.212733194231987,
+              "estimate": 0.21389789879322052,
+              "upper_bound": 0.2565214931964874,
+              "lower_bound": 0.1712743192911148,
               "unit": "%"
             },
             "vc": [
@@ -249,59 +155,14 @@
           }
         },
         {
-          "indic_name": "wat_loc_dwelling",
-          "indic_label": "Own dwelling",
+          "indic_name": "r1_hh_surveyed",
+          "indic_label": "Total households surveyed during data collection",
           "values": {
             "chiefdom": {
-              "estimate": 0.05967191979289055,
-              "upper_bound": 0.0976729542016983,
-              "lower_bound": 0.021670885384082794,
-              "unit": "%"
-            },
-            "vc": [
-              
-            ]
-          }
-        },
-        {
-          "indic_name": "wat_loc_other_village",
-          "indic_label": "Other village",
-          "values": {
-            "chiefdom": {
-              "estimate": 0.25198113918304443,
-              "upper_bound": 0.31599900126457214,
-              "lower_bound": 0.18796327710151672,
-              "unit": "%"
-            },
-            "vc": [
-              
-            ]
-          }
-        },
-        {
-          "indic_name": "wat_loc_village",
-          "indic_label": "Own village",
-          "values": {
-            "chiefdom": {
-              "estimate": 0.48807021975517273,
-              "upper_bound": 0.5443316698074341,
-              "lower_bound": 0.431808739900589,
-              "unit": "%"
-            },
-            "vc": [
-              
-            ]
-          }
-        },
-        {
-          "indic_name": "wat_loc_yard",
-          "indic_label": "Own yard/plot",
-          "values": {
-            "chiefdom": {
-              "estimate": 0.200276717543602,
-              "upper_bound": 0.2515256702899933,
-              "lower_bound": 0.1490277647972107,
-              "unit": "%"
+              "estimate": 647.0,
+              "upper_bound": 647.0,
+              "lower_bound": 647.0,
+              "unit": ""
             },
             "vc": [
               
@@ -309,9 +170,1052 @@
           }
         }
       ],
-      "education": [
+      "cat_bar_data": [
         
       ]
+    }
+  },
+  "access_to_services": {
+    "name": "Access to Services",
+    "categories": [
+      {
+        "cat_name": "water_sources",
+        "cat_label": "Water Sources",
+        "stakeholder_categories": [
+          "Health",
+          "WASH"
+        ]
+      },
+      {
+        "cat_name": "education",
+        "cat_label": "Education",
+        "stakeholder_categories": [
+          "Education"
+        ]
+      },
+      {
+        "cat_name": "health",
+        "cat_label": "Health",
+        "stakeholder_categories": [
+          "Health"
+        ]
+      }
+    ],
+    "indicators": {
+      "water_sources": {
+        "grid_data": [
+          
+        ],
+        "cat_bar_data": [
+          {
+            "display_type": "cat_bar",
+            "cat_name": "r1_wat_drink",
+            "cat_label": "Primary drinking water source",
+            "unit": "%",
+            "sub_indicators": [
+              {
+                "indic_name": "r1_wat_drink_borehole",
+                "indic_label": "Borehole/tubehole",
+                "estimate": 0.4224821627140045,
+                "upper_bound": 0.5149213075637817,
+                "lower_bound": 0.3300430476665497
+              },
+              {
+                "indic_name": "r1_wat_drink_prot_dug",
+                "indic_label": "Protected dughole",
+                "estimate": 0.16327378153800964,
+                "upper_bound": 0.21098840236663818,
+                "lower_bound": 0.1155591756105423
+              },
+              {
+                "indic_name": "r1_wat_drink_unprot_dug",
+                "indic_label": "Unprotected dughole",
+                "estimate": 0.29142820835113525,
+                "upper_bound": 0.3701232373714447,
+                "lower_bound": 0.212733194231987
+              },
+              {
+                "indic_name": "r1_wat_drink_other",
+                "indic_label": "Other",
+                "estimate": 0.1228158250451088,
+                "upper_bound": 0.16194072365760803,
+                "lower_bound": 0.08369092643260956
+              }
+            ]
+          },
+          {
+            "display_type": "cat_bar",
+            "cat_name": "r1_wat_loc",
+            "cat_label": "Primary drinking water location",
+            "unit": "%",
+            "sub_indicators": [
+              {
+                "indic_name": "r1_wat_loc_dwelling",
+                "indic_label": "Own dwelling",
+                "estimate": 0.05967191979289055,
+                "upper_bound": 0.0976729542016983,
+                "lower_bound": 0.021670885384082794
+              },
+              {
+                "indic_name": "r1_wat_loc_yard",
+                "indic_label": "Own yard/plot",
+                "estimate": 0.200276717543602,
+                "upper_bound": 0.2515256702899933,
+                "lower_bound": 0.1490277647972107
+              },
+              {
+                "indic_name": "r1_wat_loc_village",
+                "indic_label": "Own village",
+                "estimate": 0.48807021975517273,
+                "upper_bound": 0.5443316698074341,
+                "lower_bound": 0.431808739900589
+              },
+              {
+                "indic_name": "r1_wat_loc_other_village",
+                "indic_label": "Other village",
+                "estimate": 0.25198113918304443,
+                "upper_bound": 0.31599900126457214,
+                "lower_bound": 0.18796327710151672
+              }
+            ]
+          }
+        ]
+      },
+      "education": {
+        "grid_data": [
+          {
+            "indic_name": "r1_pri_dry_time_hr_w1",
+            "indic_label": "Distance to primary school in dry season (hours)",
+            "values": {
+              "chiefdom": {
+                "estimate": 1.225588272460298,
+                "upper_bound": 1.355459705789002,
+                "lower_bound": 1.095716839131594,
+                "unit": ""
+              },
+              "vc": [
+                {
+                  "vc_code": 6,
+                  "vc_name": "Kalundu",
+                  "estimate": 0.9856220069622117,
+                  "upper_bound": 1.1187884981731382,
+                  "lower_bound": 0.8492946861731883
+                },
+                {
+                  "vc_code": 2,
+                  "vc_name": "Inongwe",
+                  "estimate": 1.049388132377358,
+                  "upper_bound": 1.220965925135394,
+                  "lower_bound": 0.8786850620584754
+                },
+                {
+                  "vc_code": 4,
+                  "vc_name": "Kawilizhi",
+                  "estimate": 1.056269395533046,
+                  "upper_bound": 1.3076764626789812,
+                  "lower_bound": 0.7990885887622083
+                },
+                {
+                  "vc_code": 1,
+                  "vc_name": "Ngabo",
+                  "estimate": 1.0714507849901216,
+                  "upper_bound": 1.227445127737333,
+                  "lower_bound": 0.9097988404676648
+                },
+                {
+                  "vc_code": 7,
+                  "vc_name": "Chibunze",
+                  "estimate": 1.0938219702715006,
+                  "upper_bound": 1.2941962815587087,
+                  "lower_bound": 0.8822387437551148
+                },
+                {
+                  "vc_code": 5,
+                  "vc_name": "Shamutonko",
+                  "estimate": 1.2146502700717035,
+                  "upper_bound": 1.3738389497369314,
+                  "lower_bound": 1.0519240386951212
+                },
+                {
+                  "vc_code": 8,
+                  "vc_name": "Nakalongwe",
+                  "estimate": 1.436274546034196,
+                  "upper_bound": 1.582744330185725,
+                  "lower_bound": 1.289804761882667
+                },
+                {
+                  "vc_code": 3,
+                  "vc_name": "Baambwe",
+                  "estimate": 1.545472765038159,
+                  "upper_bound": 1.660952275175035,
+                  "lower_bound": 1.4251199556963607
+                }
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_pri_rainy_time_hr_w1",
+            "indic_label": "Distance to primary school in rainy season (hours)",
+            "values": {
+              "chiefdom": {
+                "estimate": 1.477297890354031,
+                "upper_bound": 1.636029001446221,
+                "lower_bound": 1.318566779261841,
+                "unit": ""
+              },
+              "vc": [
+                {
+                  "vc_code": 6,
+                  "vc_name": "Kalundu",
+                  "estimate": 1.2272634257494561,
+                  "upper_bound": 1.3984132240659974,
+                  "lower_bound": 1.0514311964854302
+                },
+                {
+                  "vc_code": 2,
+                  "vc_name": "Inongwe",
+                  "estimate": 1.313985450217595,
+                  "upper_bound": 1.5190010467912527,
+                  "lower_bound": 1.1127956978547935
+                },
+                {
+                  "vc_code": 4,
+                  "vc_name": "Kawilizhi",
+                  "estimate": 1.3188634368089411,
+                  "upper_bound": 1.6168159523088295,
+                  "lower_bound": 1.0177380274342511
+                },
+                {
+                  "vc_code": 1,
+                  "vc_name": "Ngabo",
+                  "estimate": 1.3379915784380678,
+                  "upper_bound": 1.5318009977877791,
+                  "lower_bound": 1.1520968851944797
+                },
+                {
+                  "vc_code": 5,
+                  "vc_name": "Shamutonko",
+                  "estimate": 1.376127621366263,
+                  "upper_bound": 1.5656243122916442,
+                  "lower_bound": 1.1815421123785441
+                },
+                {
+                  "vc_code": 7,
+                  "vc_name": "Chibunze",
+                  "estimate": 1.4597094657446015,
+                  "upper_bound": 1.7091687202797443,
+                  "lower_bound": 1.2244371796536138
+                },
+                {
+                  "vc_code": 8,
+                  "vc_name": "Nakalongwe",
+                  "estimate": 1.784313818987678,
+                  "upper_bound": 1.957398614064751,
+                  "lower_bound": 1.611229023910604
+                },
+                {
+                  "vc_code": 3,
+                  "vc_name": "Baambwe",
+                  "estimate": 1.7956664921220953,
+                  "upper_bound": 1.939784239934422,
+                  "lower_bound": 1.6557719667605284
+                }
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_sec_dry_time_hr_w1",
+            "indic_label": "Distance to secondary school in dry season (hours)",
+            "values": {
+              "chiefdom": {
+                "estimate": 1.351609283434878,
+                "upper_bound": 1.556306656406038,
+                "lower_bound": 1.146911910463718,
+                "unit": ""
+              },
+              "vc": [
+                {
+                  "vc_code": 1,
+                  "vc_name": "Ngabo",
+                  "estimate": 0.9766351699701394,
+                  "upper_bound": 1.1970971519618396,
+                  "lower_bound": 0.7539677235310452
+                },
+                {
+                  "vc_code": 6,
+                  "vc_name": "Kalundu",
+                  "estimate": 1.0172980581198154,
+                  "upper_bound": 1.2057877928684209,
+                  "lower_bound": 0.828090415054688
+                },
+                {
+                  "vc_code": 5,
+                  "vc_name": "Shamutonko",
+                  "estimate": 1.245177314946399,
+                  "upper_bound": 1.4705887517168408,
+                  "lower_bound": 1.0258629038401559
+                },
+                {
+                  "vc_code": 4,
+                  "vc_name": "Kawilizhi",
+                  "estimate": 1.4390079963138713,
+                  "upper_bound": 1.7807416674405558,
+                  "lower_bound": 1.1092804771616707
+                },
+                {
+                  "vc_code": 2,
+                  "vc_name": "Inongwe",
+                  "estimate": 1.491840826166646,
+                  "upper_bound": 1.727407326052062,
+                  "lower_bound": 1.2646000376948976
+                },
+                {
+                  "vc_code": 8,
+                  "vc_name": "Nakalongwe",
+                  "estimate": 1.588235350216136,
+                  "upper_bound": 1.733849716748597,
+                  "lower_bound": 1.442620983683675
+                },
+                {
+                  "vc_code": 3,
+                  "vc_name": "Baambwe",
+                  "estimate": 1.614333195142607,
+                  "upper_bound": 1.7675713902706476,
+                  "lower_bound": 1.4561654553856962
+                },
+                {
+                  "vc_code": 7,
+                  "vc_name": "Chibunze",
+                  "estimate": 1.654227031174463,
+                  "upper_bound": 1.934561366520921,
+                  "lower_bound": 1.3756977586298649
+                }
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_sec_rainy_time_hr_w1",
+            "indic_label": "Distance to secondary school in rainy season (hours)",
+            "values": {
+              "chiefdom": {
+                "estimate": 2.209787332758897,
+                "upper_bound": 2.452410557911209,
+                "lower_bound": 1.967164107606584,
+                "unit": ""
+              },
+              "vc": [
+                {
+                  "vc_code": 6,
+                  "vc_name": "Kalundu",
+                  "estimate": 1.2216231529304078,
+                  "upper_bound": 1.4100702689589983,
+                  "lower_bound": 1.0265074333009392
+                },
+                {
+                  "vc_code": 5,
+                  "vc_name": "Shamutonko",
+                  "estimate": 1.4007390849954946,
+                  "upper_bound": 1.6232794854464696,
+                  "lower_bound": 1.182638750976078
+                },
+                {
+                  "vc_code": 4,
+                  "vc_name": "Kawilizhi",
+                  "estimate": 1.439967439427332,
+                  "upper_bound": 1.8268651823663007,
+                  "lower_bound": 1.0494836302799653
+                },
+                {
+                  "vc_code": 8,
+                  "vc_name": "Nakalongwe",
+                  "estimate": 2.043300768908332,
+                  "upper_bound": 2.193073619629167,
+                  "lower_bound": 1.893527918187497
+                },
+                {
+                  "vc_code": 2,
+                  "vc_name": "Inongwe",
+                  "estimate": 2.1231649038097524,
+                  "upper_bound": 2.3621320212753623,
+                  "lower_bound": 1.891286545886916
+                },
+                {
+                  "vc_code": 3,
+                  "vc_name": "Baambwe",
+                  "estimate": 2.273668347054429,
+                  "upper_bound": 2.4293400278105053,
+                  "lower_bound": 2.120343359618312
+                },
+                {
+                  "vc_code": 1,
+                  "vc_name": "Ngabo",
+                  "estimate": 2.3776164956116066,
+                  "upper_bound": 2.639844172542172,
+                  "lower_bound": 2.1058942135843446
+                },
+                {
+                  "vc_code": 7,
+                  "vc_name": "Chibunze",
+                  "estimate": 5.825859436747109,
+                  "upper_bound": 6.126493786423998,
+                  "lower_bound": 5.53138217496114
+                }
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_high_dry_time_hr_w1",
+            "indic_label": "Distance to high school in dry season (hours)",
+            "values": {
+              "chiefdom": {
+                "estimate": 2.082409607344323,
+                "upper_bound": 2.292467677250146,
+                "lower_bound": 1.8723515374385,
+                "unit": ""
+              },
+              "vc": [
+                {
+                  "vc_code": 4,
+                  "vc_name": "Kawilizhi",
+                  "estimate": 0.5949370969443502,
+                  "upper_bound": 0.9736272572864677,
+                  "lower_bound": 0.2008598892909128
+                },
+                {
+                  "vc_code": 5,
+                  "vc_name": "Shamutonko",
+                  "estimate": 1.6270381444340618,
+                  "upper_bound": 1.8181577273079745,
+                  "lower_bound": 1.428090624086089
+                },
+                {
+                  "vc_code": 8,
+                  "vc_name": "Nakalongwe",
+                  "estimate": 1.700000063578288,
+                  "upper_bound": 1.783265240786193,
+                  "lower_bound": 1.616734886370383
+                },
+                {
+                  "vc_code": 6,
+                  "vc_name": "Kalundu",
+                  "estimate": 1.9508399487616728,
+                  "upper_bound": 2.1166653237356208,
+                  "lower_bound": 1.791371142247096
+                },
+                {
+                  "vc_code": 1,
+                  "vc_name": "Ngabo",
+                  "estimate": 2.0034443750775632,
+                  "upper_bound": 2.6889212565557377,
+                  "lower_bound": 1.3276788281064498
+                },
+                {
+                  "vc_code": 3,
+                  "vc_name": "Baambwe",
+                  "estimate": 2.0997721281423347,
+                  "upper_bound": 2.2457597648151646,
+                  "lower_bound": 1.954020008588009
+                },
+                {
+                  "vc_code": 7,
+                  "vc_name": "Chibunze",
+                  "estimate": 3.0755425970948647,
+                  "upper_bound": 3.338848934184912,
+                  "lower_bound": 2.8174360177316755
+                },
+                {
+                  "vc_code": 2,
+                  "vc_name": "Inongwe",
+                  "estimate": 3.1757300091448597,
+                  "upper_bound": 3.472285882824057,
+                  "lower_bound": 2.8698309976469143
+                }
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_high_rainy_time_hr_w1",
+            "indic_label": "Distance to high school in rainy season (hours)",
+            "values": {
+              "chiefdom": {
+                "estimate": 2.378338849808984,
+                "upper_bound": 2.659108657159774,
+                "lower_bound": 2.097569042458194,
+                "unit": ""
+              },
+              "vc": [
+                {
+                  "vc_code": 4,
+                  "vc_name": "Kawilizhi",
+                  "estimate": 0.6704600175669796,
+                  "upper_bound": 1.121089750149498,
+                  "lower_bound": 0.23030050500523658
+                },
+                {
+                  "vc_code": 5,
+                  "vc_name": "Shamutonko",
+                  "estimate": 1.7059990816539743,
+                  "upper_bound": 1.9491906029368091,
+                  "lower_bound": 1.4665161456685085
+                },
+                {
+                  "vc_code": 3,
+                  "vc_name": "Baambwe",
+                  "estimate": 2.3052664886398633,
+                  "upper_bound": 2.4862158806627304,
+                  "lower_bound": 2.1269668274679647
+                },
+                {
+                  "vc_code": 6,
+                  "vc_name": "Kalundu",
+                  "estimate": 2.3090432230722833,
+                  "upper_bound": 2.509327145474405,
+                  "lower_bound": 2.1087674815388837
+                },
+                {
+                  "vc_code": 1,
+                  "vc_name": "Ngabo",
+                  "estimate": 2.3450137920939116,
+                  "upper_bound": 3.173128048893346,
+                  "lower_bound": 1.517738812717717
+                },
+                {
+                  "vc_code": 8,
+                  "vc_name": "Nakalongwe",
+                  "estimate": 2.544444465637207,
+                  "upper_bound": 2.653423974833075,
+                  "lower_bound": 2.435464956441339
+                },
+                {
+                  "vc_code": 2,
+                  "vc_name": "Inongwe",
+                  "estimate": 3.22520771846949,
+                  "upper_bound": 3.5783513779967775,
+                  "lower_bound": 2.864455104085194
+                },
+                {
+                  "vc_code": 7,
+                  "vc_name": "Chibunze",
+                  "estimate": 4.049445153950596,
+                  "upper_bound": 4.377545960999306,
+                  "lower_bound": 3.725996866052916
+                }
+              ]
+            }
+          }
+        ],
+        "cat_bar_data": [
+          
+        ]
+      },
+      "health": {
+        "grid_data": [
+          {
+            "indic_name": "r1_hea_dry_time_hr_w1",
+            "indic_label": "Distance to health care in dry season (hours)",
+            "values": {
+              "chiefdom": {
+                "estimate": 1.541090045086514,
+                "upper_bound": 1.727016702837335,
+                "lower_bound": 1.355163387335693,
+                "unit": ""
+              },
+              "vc": [
+                {
+                  "vc_code": 5,
+                  "vc_name": "Shamutonko",
+                  "estimate": 0.7760250770191245,
+                  "upper_bound": 0.992494182690674,
+                  "lower_bound": 0.560277211266829
+                },
+                {
+                  "vc_code": 4,
+                  "vc_name": "Kawilizhi",
+                  "estimate": 0.8636294426014056,
+                  "upper_bound": 1.2259270526949193,
+                  "lower_bound": 0.5004362595402625
+                },
+                {
+                  "vc_code": 1,
+                  "vc_name": "Ngabo",
+                  "estimate": 1.1881102635773093,
+                  "upper_bound": 1.4009924037686836,
+                  "lower_bound": 0.9785853114224679
+                },
+                {
+                  "vc_code": 6,
+                  "vc_name": "Kalundu",
+                  "estimate": 1.252308206115601,
+                  "upper_bound": 1.4311972526400263,
+                  "lower_bound": 1.0746939081177596
+                },
+                {
+                  "vc_code": 8,
+                  "vc_name": "Nakalongwe",
+                  "estimate": 1.288235276937485,
+                  "upper_bound": 1.51210560685625,
+                  "lower_bound": 1.06436494701872
+                },
+                {
+                  "vc_code": 3,
+                  "vc_name": "Baambwe",
+                  "estimate": 1.6823791780374981,
+                  "upper_bound": 1.8283302457457864,
+                  "lower_bound": 1.5416396621360053
+                },
+                {
+                  "vc_code": 2,
+                  "vc_name": "Inongwe",
+                  "estimate": 1.6960011119475256,
+                  "upper_bound": 1.918236877589979,
+                  "lower_bound": 1.4707421101074547
+                },
+                {
+                  "vc_code": 7,
+                  "vc_name": "Chibunze",
+                  "estimate": 3.5324774826860788,
+                  "upper_bound": 3.820036489087389,
+                  "lower_bound": 3.2441639718129016
+                }
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_hea_rainy_time_hr_w1",
+            "indic_label": "Distance to health care in rainy season (hours)",
+            "values": {
+              "chiefdom": {
+                "estimate": 1.957112379893186,
+                "upper_bound": 2.223330164625136,
+                "lower_bound": 1.690894595161236,
+                "unit": ""
+              },
+              "vc": [
+                {
+                  "vc_code": 5,
+                  "vc_name": "Shamutonko",
+                  "estimate": 0.8551796115754423,
+                  "upper_bound": 1.149167956307316,
+                  "lower_bound": 0.5551427195830603
+                },
+                {
+                  "vc_code": 4,
+                  "vc_name": "Kawilizhi",
+                  "estimate": 0.9219665473684006,
+                  "upper_bound": 1.4188236326985721,
+                  "lower_bound": 0.4416927769296489
+                },
+                {
+                  "vc_code": 6,
+                  "vc_name": "Kalundu",
+                  "estimate": 1.5117818940243872,
+                  "upper_bound": 1.7621110562412032,
+                  "lower_bound": 1.2556055623736195
+                },
+                {
+                  "vc_code": 1,
+                  "vc_name": "Ngabo",
+                  "estimate": 1.523374949006107,
+                  "upper_bound": 1.8118000050942762,
+                  "lower_bound": 1.2467519458530425
+                },
+                {
+                  "vc_code": 8,
+                  "vc_name": "Nakalongwe",
+                  "estimate": 1.721568628269083,
+                  "upper_bound": 2.037062813799442,
+                  "lower_bound": 1.406074442738724
+                },
+                {
+                  "vc_code": 2,
+                  "vc_name": "Inongwe",
+                  "estimate": 2.0623983578223126,
+                  "upper_bound": 2.375127583940542,
+                  "lower_bound": 1.7516119833094907
+                },
+                {
+                  "vc_code": 3,
+                  "vc_name": "Baambwe",
+                  "estimate": 2.0875545585650515,
+                  "upper_bound": 2.2905950579334036,
+                  "lower_bound": 1.8808463129446478
+                },
+                {
+                  "vc_code": 7,
+                  "vc_name": "Chibunze",
+                  "estimate": 5.314244478703285,
+                  "upper_bound": 5.715638867242814,
+                  "lower_bound": 4.901673972395405
+                }
+              ]
+            }
+          }
+        ],
+        "cat_bar_data": [
+          
+        ]
+      }
+    }
+  },
+  "health_behaviours": {
+    "name": "Health Behaviours",
+    "categories": [
+      {
+        "cat_name": "diarrhea_water",
+        "cat_label": "Diarrhea/Water",
+        "stakeholder_categories": [
+          "Health",
+          "WASH"
+        ]
+      },
+      {
+        "cat_name": "maternal",
+        "cat_label": "Maternal",
+        "stakeholder_categories": [
+          "Health"
+        ]
+      },
+      {
+        "cat_name": "hiv_aids",
+        "cat_label": "HIV/AIDS",
+        "stakeholder_categories": [
+          "HIV",
+          "Health"
+        ]
+      }
+    ],
+    "indicators": {
+      "hiv_aids": {
+        "grid_data": [
+          {
+            "indic_name": "r1_aids_testlast_time",
+            "indic_label": "Average months since respondent's last HIV test",
+            "values": {
+              "chiefdom": {
+                "estimate": 13.676162719726562,
+                "upper_bound": 18.323015213012695,
+                "lower_bound": 9.029311180114746,
+                "unit": ""
+              },
+              "vc": [
+                
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_aids_belief_1_correct",
+            "indic_label": "Percent with correct response to \"Can someone with AIDS look healthy?\" (correct response: yes)",
+            "values": {
+              "chiefdom": {
+                "estimate": 0.8010245561599731,
+                "upper_bound": 0.8674600124359131,
+                "lower_bound": 0.7345890402793884,
+                "unit": "%"
+              },
+              "vc": [
+                
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_aids_belief_2_correct",
+            "indic_label": "Percent with correct response to \"Is AIDS prevented with condoms?\" (correct response: yes)",
+            "values": {
+              "chiefdom": {
+                "estimate": 0.5821983814239502,
+                "upper_bound": 0.6686674952507019,
+                "lower_bound": 0.49572932720184326,
+                "unit": "%"
+              },
+              "vc": [
+                
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_aids_belief_3_correct",
+            "indic_label": "Percent with correct response to \"Is AIDS prevented by not sharing food?\" (correct response: no)",
+            "values": {
+              "chiefdom": {
+                "estimate": 0.805034339427948,
+                "upper_bound": 0.8396524786949158,
+                "lower_bound": 0.770416259765625,
+                "unit": "%"
+              },
+              "vc": [
+                
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_aids_belief_4_correct",
+            "indic_label": "Percent with correct response to \"Is AIDS prevented by not shaking hands?\" (correct response: no)",
+            "values": {
+              "chiefdom": {
+                "estimate": 0.8097589015960693,
+                "upper_bound": 0.847415566444397,
+                "lower_bound": 0.7721022367477417,
+                "unit": "%"
+              },
+              "vc": [
+                
+              ]
+            }
+          }
+        ],
+        "cat_bar_data": [
+          
+        ]
+      },
+      "maternal": {
+        "grid_data": [
+          {
+            "indic_name": "r1_received_antenatal",
+            "indic_label": "Percent of currently pregnant women who have received antenatal care",
+            "values": {
+              "chiefdom": {
+                "estimate": 0.8504621982574463,
+                "upper_bound": 0.9638091921806335,
+                "lower_bound": 0.7371151447296143,
+                "unit": "%"
+              },
+              "vc": [
+                
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_female_under_18_preg",
+            "indic_label": "Average number of pregnancies for female household members currently under 18 years old",
+            "values": {
+              "chiefdom": {
+                "estimate": 0.05830811336636543,
+                "upper_bound": 0.09077354520559311,
+                "lower_bound": 0.025842687115073204,
+                "unit": ""
+              },
+              "vc": [
+                
+              ]
+            }
+          }
+        ],
+        "cat_bar_data": [
+          {
+            "display_type": "cat_bar",
+            "cat_name": "r1_plan_del",
+            "cat_label": "Percent of past pregnancies delivered or current pregnancies planned to deliver in\u2026",
+            "unit": "%",
+            "sub_indicators": [
+              {
+                "indic_name": "r1_plan_del_hospital",
+                "indic_label": "Hospital",
+                "estimate": 0.7791793346405029,
+                "upper_bound": 0.8660351037979126,
+                "lower_bound": 0.692323625087738
+              },
+              {
+                "indic_name": "r1_plan_del_center",
+                "indic_label": "Health Clinic",
+                "estimate": 0.11479993164539337,
+                "upper_bound": 0.17153042554855347,
+                "lower_bound": 0.05806943401694298
+              },
+              {
+                "indic_name": "r1_plan_del_home",
+                "indic_label": "Home",
+                "estimate": 0.12357930094003677,
+                "upper_bound": 0.1924188733100891,
+                "lower_bound": 0.05473973602056503
+              }
+            ]
+          },
+          {
+            "display_type": "cat_bar",
+            "cat_name": "r1_pref_del",
+            "cat_label": "Percent of past or current pregnancies preferred to deliver in\u2026",
+            "unit": "%",
+            "sub_indicators": [
+              {
+                "indic_name": "r1_pref_del_hospital",
+                "indic_label": "Hospital",
+                "estimate": 0.8193400502204895,
+                "upper_bound": 0.8920066356658936,
+                "lower_bound": 0.7466734051704407
+              },
+              {
+                "indic_name": "r1_pref_del_center",
+                "indic_label": "Health Clinic",
+                "estimate": 0.11667633056640625,
+                "upper_bound": 0.17516100406646729,
+                "lower_bound": 0.05819166079163551
+              },
+              {
+                "indic_name": "r1_pref_del_home",
+                "indic_label": "Home",
+                "estimate": 0.07126748561859131,
+                "upper_bound": 0.11315653473138809,
+                "lower_bound": 0.02937844581902027
+              }
+            ]
+          }
+        ]
+      },
+      "diarrhea_water": {
+        "grid_data": [
+          {
+            "indic_name": "r1_wat_treat",
+            "indic_label": "Percent of households who treat drinking water",
+            "values": {
+              "chiefdom": {
+                "estimate": 0.3139276630175321,
+                "upper_bound": 0.364690530085435,
+                "lower_bound": 0.2631647959496292,
+                "unit": "%"
+              },
+              "vc": [
+                
+              ]
+            },
+            "reasons": {
+              "reasons_label": "Reason for not treating drinking water (percent of households)",
+              "unit": "%",
+              "reasons_indicators": [
+                {
+                  "indic_name": "r1_wat_treat_not_un",
+                  "indic_label": "Not needed",
+                  "estimate": 0.16050972044467926,
+                  "upper_bound": 0.22847266495227814,
+                  "lower_bound": 0.09254678338766098
+                },
+                {
+                  "indic_name": "r1_wat_treat_not_too_exp",
+                  "indic_label": "Too expensive",
+                  "estimate": 0.4269241690635681,
+                  "upper_bound": 0.508560836315155,
+                  "lower_bound": 0.3452875018119812
+                },
+                {
+                  "indic_name": "r1_wat_treat_not_no_chl",
+                  "indic_label": "No access to chlorine",
+                  "estimate": 0.13662117719650269,
+                  "upper_bound": 0.18503957986831665,
+                  "lower_bound": 0.08820276707410812
+                },
+                {
+                  "indic_name": "r1_wat_treat_not_dk",
+                  "indic_label": "Don't know how",
+                  "estimate": 0.10256730020046234,
+                  "upper_bound": 0.13960176706314087,
+                  "lower_bound": 0.06553282588720322
+                },
+                {
+                  "indic_name": "r1_wat_treat_not_other",
+                  "indic_label": "Other",
+                  "estimate": 0.1733776181936264,
+                  "upper_bound": 0.23494358360767365,
+                  "lower_bound": 0.11181166023015976
+                }
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_diarrhea_1_month",
+            "indic_label": "Percent of households with children who had a child with diarrhea in the last month",
+            "values": {
+              "chiefdom": {
+                "estimate": 0.5046119689941406,
+                "upper_bound": 0.563789963722229,
+                "lower_bound": 0.44543394446372986,
+                "unit": "%"
+              },
+              "vc": [
+                
+              ]
+            }
+          },
+          {
+            "indic_name": "r1_diarrhea_treat",
+            "indic_label": "Percent of households who chose not to treat a child who had diarrhea in last month",
+            "values": {
+              "chiefdom": {
+                "estimate": 0.7584624290466309,
+                "upper_bound": 0.8259605765342712,
+                "lower_bound": 0.6909643411636353,
+                "unit": "%"
+              },
+              "vc": [
+                
+              ]
+            },
+            "reasons": {
+              "reasons_label": "Reason for not treating child with diarrhea (percent of households)",
+              "unit": "%",
+              "reasons_indicators": [
+                {
+                  "indic_name": "r1_dia_treat_no_exp",
+                  "indic_label": "Too expensive",
+                  "estimate": 0.130361869931221,
+                  "upper_bound": 0.25468993186950684,
+                  "lower_bound": 0.00603381497785449
+                },
+                {
+                  "indic_name": "r1_dia_treat_no_dist",
+                  "indic_label": "Too far",
+                  "estimate": 0.38971251249313354,
+                  "upper_bound": 0.5309523344039917,
+                  "lower_bound": 0.2484726756811142
+                },
+                {
+                  "indic_name": "r1_dia_treat_no_trust",
+                  "indic_label": "Don't trust provider",
+                  "estimate": 0.019478758797049522,
+                  "upper_bound": 0.05728217959403992,
+                  "lower_bound": -0.018324661999940872
+                },
+                {
+                  "indic_name": "r1_dia_treat_no_un",
+                  "indic_label": "Not needed",
+                  "estimate": 0.46044686436653137,
+                  "upper_bound": 0.6032949686050415,
+                  "lower_bound": 0.31759876012802124
+                }
+              ]
+            }
+          }
+        ],
+        "cat_bar_data": [
+          {
+            "display_type": "cat_bar",
+            "cat_name": "r1_wat_treat",
+            "cat_label": "Drinking water treatment method",
+            "unit": "%",
+            "sub_indicators": [
+              {
+                "indic_name": "r1_wat_treat_bleach_chl",
+                "indic_label": "Chlorine or bleach",
+                "estimate": 0.9058694243431091,
+                "upper_bound": 0.9488205909729004,
+                "lower_bound": 0.8629181981086731
+              },
+              {
+                "indic_name": "r1_wat_treat_boil",
+                "indic_label": "Boiling",
+                "estimate": 0.07905087620019913,
+                "upper_bound": 0.11843546479940414,
+                "lower_bound": 0.03966628015041351
+              },
+              {
+                "indic_name": "r1_wat_treat_other",
+                "indic_label": "Other treatment method",
+                "estimate": 0.04004640504717827,
+                "upper_bound": 0.07434569299221039,
+                "lower_bound": 0.005747115705162287
+              }
+            ]
+          }
+        ]
+      }
     }
   }
 }

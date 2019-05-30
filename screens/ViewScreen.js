@@ -1,6 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, List } from 'react-native';
 import { Card, ListItem, Button, Icon } from 'react-native-elements';
+import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
 
 export default class ViewScreen extends React.Component {
   static navigationOptions = {
@@ -16,16 +17,16 @@ export default class ViewScreen extends React.Component {
           name: 'Snapshot of the Chiefdom',
           date: 'April 2019'
         },
-        // {
-        //   key: 'access_to_services',
-        //   name: 'Access to Services',
-        //   date: 'April 2019'
-        // },
-        // {
-        //   key: 'health_behaviors',
-        //   name: 'Health Behaviors',
-        //   date: 'April 2019'
-        // },
+        {
+          key: 'access_to_services',
+          name: 'Access to Services',
+          date: 'April 2019'
+        },
+        {
+          key: 'health_behaviours',
+          name: 'Health Behaviours',
+          date: 'April 2019'
+        },
       ]
     };
 
@@ -38,8 +39,10 @@ export default class ViewScreen extends React.Component {
               <ListItem
                 key={i}
                 title={u.name}
+                titleStyle={styles.titleStyle}
                 subtitle={'Collected '+u.date}
-                chevron={{color: '#2e78b7'}}
+                subtitleStyle={styles.subtitleStyle}
+                chevron={{color: '#2e78b7',size:36}}
                 bottomDivider={true}
                 onPress={() => navigate('Module', {moduleKey: u.key})}
               />
@@ -52,9 +55,16 @@ export default class ViewScreen extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
   },
+  titleStyle: {
+    fontSize:'17@ms',
+  },
+  subtitleStyle: {
+    color: 'rgba(96,100,109, 1)',
+    fontSize:'14@ms',
+  }
 });
