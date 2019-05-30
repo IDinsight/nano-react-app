@@ -5,6 +5,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
 
 export default class RequestScreen extends React.Component {
   static navigationOptions = {
@@ -25,19 +26,22 @@ export default class RequestScreen extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     flex: 1,
-    paddingTop: 35,
+    paddingTop: '35@vs',
     backgroundColor: '#fff',
   },
   getStartedContainer: {
-    marginHorizontal: 20,
+    marginHorizontal: '20@s',
   },
   getStartedText: {
-    fontSize: 17,
+    fontSize: '17@ms',
     color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    marginBottom:15
+    lineHeight: '24@ms',
+    marginBottom:'15@vs'
   },
+  headerTitleStyle: {
+    fontSize: '18@ms'
+  }
 });

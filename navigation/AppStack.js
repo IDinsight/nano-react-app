@@ -17,7 +17,15 @@ const HomeStack = createStackNavigator({
   Module: {screen: ModuleScreen},
   Request: {screen: RequestScreen},
   Stakeholders: {screen: StakeholdersScreen},
-});
+  },
+  {
+    defaultNavigationOptions: {
+      headerTitleStyle: {fontSize:32},
+      headerStyle: {height:80}
+
+    }
+  }
+);
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',

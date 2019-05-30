@@ -28,7 +28,7 @@
     },
     "android": {
       "package": "com.idinsight.nano",
-      "versionCode": 2,
+      "versionCode": 4,
       "permissions": [],
     }
   }

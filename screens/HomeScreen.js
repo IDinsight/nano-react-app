@@ -9,6 +9,7 @@ import {
   Button,
   TouchableOpacity
 } from 'react-native';
+import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -40,20 +41,20 @@ export default class HomeScreen extends React.Component {
 
           <View style={styles.buttonGroupContainer}>
             <View style={styles.buttonContainer}>
-              <Button
+              <TouchableOpacity
+                style={styles.customButton}
                 onPress={() => navigate('View')}
-                title="View Data"
-                color="#4088d5"
-                accessibilityLabel="View your data"
-              />
+                >
+                <Text style={styles.customButtonText}>VIEW DATA</Text>
+              </TouchableOpacity>
             </View>
             <View style={styles.buttonContainer}>
-              <Button
+              <TouchableOpacity
+                style={styles.customButton}
                 onPress={() => navigate('Request')}
-                title="Request Data"
-                color="#4088d5"
-                accessibilityLabel="Request data collection"
-              />
+                >
+                <Text style={styles.customButtonText}>REQUEST DATA</Text>
+              </TouchableOpacity>
             </View>
           </View>
           <View style={styles.helpContainer}>
@@ -68,99 +69,64 @@ export default class HomeScreen extends React.Component {
 
 }
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
   },
-  developmentModeText: {
-    marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
-    fontSize: 14,
-    lineHeight: 19,
-    textAlign: 'center',
-  },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: '30@vs',
   },
   welcomeContainer: {
     alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
+    marginTop: '10@vs',
+    marginBottom: '20@vs',
   },
   welcomeImage: {
-    width: 120,
-    height: 100,
+    width: '120@s',
+    height: '100@vs',
     resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
+    marginTop: '3@vs',
   },
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
   },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
   buttonGroupContainer: {
-    marginTop: 10,
+    marginTop: '10@vs',
     alignItems: 'center'
   },
   buttonContainer: {
-    marginTop: 50,
+    marginTop: '50@vs',
     width: '50%'
   },
-  codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
-  },
-  codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    borderRadius: 3,
-    paddingHorizontal: 4,
-  },
   getStartedText: {
-    fontSize: 17,
+    fontSize: '17@ms0.75',
     color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
+    lineHeight: '24@ms',
     textAlign: 'center',
-  },
-  tabBarInfoContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    ...Platform.select({
-      ios: {
-        shadowColor: 'black',
-        shadowOffset: { height: -3 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-      },
-      android: {
-        elevation: 20,
-      },
-    }),
-    alignItems: 'center',
-    backgroundColor: '#fbfbfb',
-    paddingVertical: 20,
-  },
-  tabBarInfoText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
-  },
-  navigationFilename: {
-    marginTop: 5,
   },
   helpContainer: {
-    marginTop: 50,
+    marginTop: '50@vs',
     alignItems: 'center',
   },
   helpLink: {
-    paddingVertical: 15,
+    paddingVertical: '15@vs',
   },
   helpLinkText: {
-    fontSize: 14,
+    fontSize: '14@ms0.75',
     color: '#2e78b7',
+  },
+  customButtonText: {
+    fontSize: '16@ms',
+    fontWeight: '600',
+    color: "#fff",
+  },
+  customButton: {
+    alignItems: 'center',
+    backgroundColor: "#4088d5",
+    paddingVertical: '10@ms',
+    borderRadius: 3,
+    elevation: 3
   },
 });
