@@ -9,7 +9,6 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { ListItem } from 'react-native-elements';
-import { Auth } from 'aws-amplify';
 import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
 
 export default class ProfileScreen extends React.Component {
