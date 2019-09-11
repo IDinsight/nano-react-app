@@ -10,6 +10,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
+import * as Segment from 'expo-analytics-segment';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -23,6 +24,7 @@ export default class HomeScreen extends React.Component {
         chiefName: 'Mukobela',
       }
     };
+    Segment.screen('Home Screen');
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -35,7 +37,7 @@ export default class HomeScreen extends React.Component {
 
           <View style={styles.getStartedContainer}>
 
-            <Text style={styles.getStartedText}>Muli buti ba Mwami ba {data.user.chiefName}!</Text>
+            <Text style={styles.getStartedText}>Wabonwa Mwami {data.user.chiefName}!</Text>
 
           </View>
 

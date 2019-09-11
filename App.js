@@ -1,6 +1,9 @@
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import { AppLoading, Asset, Font, Icon } from 'expo';
+import { AppLoading } from 'expo';
+import { Ionicons } from '@expo/vector-icons';
+import { Asset } from 'expo-asset';
+import * as Font from 'expo-font';
 import AppNavigator from './navigation/AppNavigator';
 
 class App extends React.Component {
@@ -35,7 +38,7 @@ class App extends React.Component {
       ]),
       Font.loadAsync({
         // This is the font that we are using for our tab bar
-        ...Icon.Ionicons.font,
+        ...Ionicons.font,
       }),
     ]);
   };

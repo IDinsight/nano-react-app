@@ -3,12 +3,12 @@
     "name": "Nano",
     "slug": "Nano",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "33.0.0",
     "platforms": [
       "ios",
       "android"
     ],
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/nano.png",
     "splash": {
@@ -28,8 +28,8 @@
     },
     "android": {
       "package": "com.idinsight.nano",
-      "versionCode": 5,
-      "permissions": [],
+      "versionCode": 6,
+      "permissions": []
     }
   }
 }

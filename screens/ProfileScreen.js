@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
+import * as Segment from 'expo-analytics-segment';
 
 export default class ProfileScreen extends React.Component {
   static navigationOptions = {
@@ -34,6 +35,8 @@ export default class ProfileScreen extends React.Component {
 
   render() {
 
+    Segment.screen('Profile Screen')
+
     const data = {
       user: [
         {
@@ -42,14 +45,20 @@ export default class ProfileScreen extends React.Component {
         },
         {
           label: 'Name',
-          value: 'Wesley Shabongo Mukobela',
+          value: 'Wesley Shabongwe Mukobela',
+        },
+        {
+          label: 'Title',
+          value: 'Chief Mukobela'
         },
         {
           label: 'Phone',
           value: [
             '+260962848880',
             '+260953010443',
-            '+260966178351'
+            '+260966278351',
+            '+260977278351',
+            '+260760781006'
             ],
         },
         {

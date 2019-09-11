@@ -4,6 +4,7 @@ import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import stakeholders from '../data/stakeholders.json';
 import {Linking} from 'react-native';
 import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
+import * as Segment from 'expo-analytics-segment';
 
 
 export default class StakeholdersScreen extends React.Component {
@@ -15,29 +16,55 @@ export default class StakeholdersScreen extends React.Component {
     super(props);
   }
 
-  generateStakeholderSubtitle(item) {
+generateStakeholderSubtitle(item) {
 
-    let line1 = '';
-    if (item.contact_person!=='' && item.contact_position!=='') {
-      line1 = item.contact_person + ', ' + item.contact_position;
-    }
-    else if (item.contact_position==='') {
-      line1 = item.contact_person;
-    }
-    else if (item.contact_person==='') {
-      line1 = item.contact_position;
+  
+  if (item.contact.length===0) {
+    return (
+      <View>
+        <Text style={styles.stakeholderSubtitleText}>Sectors: {item.app_categories.join(', ')}</Text>
+        <Text style={styles.stakeholderSubtitleText}></Text>
+        <Text style={styles.stakeholderSubtitleText}></Text>
+      </View>
+    );
+  }
+  else {
+
+  return <View>
+    <Text style={styles.stakeholderSubtitleText}>Sectors: {item.app_categories.join(', ')}</Text>
+
+    { 
+      item.contact.map((contact, i) => {
+
+        let line1 = '';
+
+        if (contact.contact_person!=='' && contact.contact_position!=='') {
+          line1 = contact.contact_person + ', ' + contact.contact_position;
+        }
+        else if (contact.contact_position==='') {
+          line1 = contact.contact_person;
+        }
+        else if (contact.contact_person==='') {
+          line1 = contact.contact_position;
+        }  
+        return (
+          <View>
+          <Text style={styles.stakeholderSubtitleText}>{line1}</Text>
+          <Text onPress={()=>{Linking.openURL('tel:+'+contact.contact_phone);}} style={styles.linkText}>{contact.contact_phone==='' ? '' : ('+' + contact.contact_phone)}</Text>
+          </View>
+        );
+      }) 
     }
 
-
-    return <View>
-    <Text style={styles.subtitleText}>Sectors: {item.app_categories.join(', ')}</Text>
-    <Text style={styles.subtitleText}>{line1}</Text>
-    <Text onPress={()=>{Linking.openURL('tel:+'+item.contact_phone);}} style={styles.linkText}>{item.contact_phone==='' ? '' : ('+' + item.contact_phone)}</Text>
     </View>;
 
   }
 
+}
+
   render() {
+
+    Segment.screen('Stakeholders Screen');
     return (
       <ScrollView style={styles.container}>
       <View style={styles.listContainer}>
@@ -82,5 +109,13 @@ const styles = ScaledSheet.create({
   linkText: {
     fontSize: '14@ms',
     color: '#2e78b7',
+  },  
+  stakeholderTitleText: {
+    color: '#000',
+    fontSize: '17@ms'
+  },
+  stakeholderSubtitleText: {
+    color: 'rgba(96,100,109, 1)',
+    fontSize: '14@ms'
   },
 });

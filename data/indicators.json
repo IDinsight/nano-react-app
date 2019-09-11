@@ -1,6 +1,7 @@
 {
   "snapshot_of_the_chiefdom": {
     "name": "Snapshot of the Chiefdom",
+    "collection_date": "April 2019",
     "categories": [
       
     ],
@@ -177,6 +178,7 @@
   },
   "access_to_services": {
     "name": "Access to Services",
+    "collection_date": "April 2019",
     "categories": [
       {
         "cat_name": "water_sources",
@@ -858,7 +860,8 @@
     }
   },
   "health_behaviours": {
-    "name": "Health Behaviours",
+    "name": "Health Beliefs & Behaviours",
+    "collection_date": "April 2019",
     "categories": [
       {
         "cat_name": "diarrhea_water",
@@ -1217,5 +1220,3455 @@
         ]
       }
     }
+  },
+"marriage_beliefs_behaviours": {
+  "name": "Marriage Beliefs & Behaviours",
+  "collection_date": "July 2019",
+  "categories": [
+    
+  ],
+  "stakeholder_categories": [
+    "General"
+  ],
+  "indicators": {
+    "grid_data": [
+      {
+        "indic_name": "marr_age_corr",
+        "indic_label": "Percent of households that gave correct answer when asked the minimum legal marriage age in Zambia",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.2453535497188568,
+            "upper_bound": 0.28776848316192627,
+            "lower_bound": 0.20293860137462616,
+            "unit": "%"
+          }
+        }
+      },
+      {
+        "indic_name": "marr_age_what_nozero",
+        "indic_label": "Average age respondents believe is the minimum legal marriage age in Zambia",
+        "values": {
+          "chiefdom": {
+            "estimate": 20.010774612426758,
+            "upper_bound": 20.55592918395996,
+            "lower_bound": 19.465620040893555,
+            "unit": ""
+          }
+        }
+      },
+      {
+        "indic_name": "marr_comm_inc",
+        "indic_label": "Percent of households that report knowing a case of child marriage in their community in the last year",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.2036011517047882,
+            "upper_bound": 0.25928765535354614,
+            "lower_bound": 0.14791461825370789,
+            "unit": "%"
+          }
+        }
+      },
+      {
+        "indic_name": "marr_prop_rep",
+        "indic_label": "Percent of households that say they would hypothetically report a case of child marriage",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.7452282905578613,
+            "upper_bound": 0.7926822304725647,
+            "lower_bound": 0.697774350643158,
+            "unit": "%"
+          }
+        }
+      }
+    ],
+    "cat_bar_data": [
+      {
+        "display_type": "cat_bar",
+        "cat_name": "marr_prop_rep_who",
+        "cat_label": "Authorities to whom households say they would report a case of child marriage",
+        "unit": "%",
+        "sub_indicators": [
+          {
+            "indic_name": "marr_prop_rep_pol",
+            "indic_label": "Police/victim support unit",
+            "estimate": 0.9100300073623657,
+            "upper_bound": 0.9384191036224365,
+            "lower_bound": 0.8816409111022949
+          },
+          {
+            "indic_name": "marr_prop_rep_chief",
+            "indic_label": "Chief",
+            "estimate": 0.18029484152793884,
+            "upper_bound": 0.2253221720457077,
+            "lower_bound": 0.13526752591133118
+          },
+          {
+            "indic_name": "marr_prop_rep_head",
+            "indic_label": "Headman/woman",
+            "estimate": 0.16840019822120667,
+            "upper_bound": 0.20850622653961182,
+            "lower_bound": 0.1282941848039627
+          }
+        ]
+      },
+      {
+        "display_type": "cat_bar",
+        "cat_name": "marr_age",
+        "cat_label": "Average age households say is the minimum appropriate marriage age",
+        "unit": "",
+        "sub_indicators": [
+          {
+            "indic_name": "marr_age_m",
+            "indic_label": "For males",
+            "estimate": 23.040077209472656,
+            "upper_bound": 23.61101531982422,
+            "lower_bound": 22.46913719177246
+          },
+          {
+            "indic_name": "marr_age_f",
+            "indic_label": "For females",
+            "estimate": 20.049840927124023,
+            "upper_bound": 20.571056365966797,
+            "lower_bound": 19.52862548828125
+          }
+        ]
+      },
+      {
+        "display_type": "cat_bar",
+        "cat_name": "marr_age_why",
+        "cat_label": "Reasons households gave a different minimum marriage age for males and females",
+        "unit": "%",
+        "sub_indicators": [
+          {
+            "indic_name": "marrdiff_fmature",
+            "indic_label": "Females mature faster",
+            "estimate": 0.5761023163795471,
+            "upper_bound": 0.6354121565818787,
+            "lower_bound": 0.5167924165725708
+          },
+          {
+            "indic_name": "marrdiff_mresp",
+            "indic_label": "Males have more HH responsibility",
+            "estimate": 0.1864446997642517,
+            "upper_bound": 0.23878347873687744,
+            "lower_bound": 0.13410590589046478
+          },
+          {
+            "indic_name": "marrdiff_natural",
+            "indic_label": "Natural for man to be older",
+            "estimate": 0.024630986154079437,
+            "upper_bound": 0.03844906762242317,
+            "lower_bound": 0.010812903754413128
+          }
+        ]
+      },
+      {
+        "display_type": "cat_bar",
+        "cat_name": "marr_age_reasons",
+        "cat_label": "Changes households believe would reduce child marriage",
+        "unit": "%",
+        "sub_indicators": [
+          {
+            "indic_name": "lowchildm_group_sens",
+            "indic_label": "More sensitization efforts",
+            "estimate": 0.5543846487998962,
+            "upper_bound": 0.6107812523841858,
+            "lower_bound": 0.4979880154132843
+          },
+          {
+            "indic_name": "lowchildm_group_lawenf",
+            "indic_label": "More law enforcement efforts",
+            "estimate": 0.4040580987930298,
+            "upper_bound": 0.4674184322357178,
+            "lower_bound": 0.3406977653503418
+          },
+          {
+            "indic_name": "lowchildm_group_educ",
+            "indic_label": "Emphasis on school/education",
+            "estimate": 0.32193097472190857,
+            "upper_bound": 0.3726644814014435,
+            "lower_bound": 0.27119743824005127
+          }
+        ]
+      },
+      {
+        "display_type": "cat_bar",
+        "cat_name": "marr_comm_local",
+        "cat_label": "Actions households say local leaders can take to reduce child marriage",
+        "unit": "%",
+        "sub_indicators": [
+          {
+            "indic_name": "childmarr_group_conseq",
+            "indic_label": "Higher consequences",
+            "estimate": 0.8437273502349854,
+            "upper_bound": 0.8780184984207153,
+            "lower_bound": 0.8094362020492554
+          },
+          {
+            "indic_name": "childmarr_group_behavior",
+            "indic_label": "Sensitization",
+            "estimate": 0.47875499725341797,
+            "upper_bound": 0.5440128445625305,
+            "lower_bound": 0.4134971499443054
+          },
+          {
+            "indic_name": "childmarr_group_opportun",
+            "indic_label": "Economic opportunities",
+            "estimate": 0.05070028826594353,
+            "upper_bound": 0.07240612059831619,
+            "lower_bound": 0.028994454070925713
+          },
+          {
+            "indic_name": "childmarr_group_monit",
+            "indic_label": "More monitoring",
+            "estimate": 0.02690873295068741,
+            "upper_bound": 0.04093637317419052,
+            "lower_bound": 0.012881094589829445
+          }
+        ]
+      }
+    ]
   }
+},
+"education_beliefs_behaviours": {
+  "name": "Education Beliefs & Behaviours",
+  "collection_date": "July 2019",
+  "categories": [
+    
+  ],
+  "stakeholder_categories": [
+    "Education"
+  ],
+  "indicators": {
+    "grid_data": [
+      {
+        "indic_name": "educ_pay_should_female",
+        "indic_label": "Percent of households that say family in vignette should pay for education for daughter over son",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.42148250341415405,
+            "upper_bound": 0.47055548429489136,
+            "lower_bound": 0.37240955233573914,
+            "unit": "%"
+          }
+        },
+        "reasons": {
+          "reasons_label": "Reasons households gave for choosing to pay for the daughter's education in the vignette",
+          "unit": "%",
+          "reasons_indicators": [
+            {
+              "indic_name": "educ_pay_f_important",
+              "indic_label": "Girls' education more important",
+              "estimate": 0.38365480303764343,
+              "upper_bound": 0.46407783031463623,
+              "lower_bound": 0.30323177576065063
+            },
+            {
+              "indic_name": "educ_pay_f_performance",
+              "indic_label": "Girls perform better in school",
+              "estimate": 0.21714593470096588,
+              "upper_bound": 0.29028064012527466,
+              "lower_bound": 0.1440112292766571
+            }
+          ]
+        }
+      }
+    ],
+    "cat_bar_data": [
+      {
+        "display_type": "group_cat_bar",
+        "cat_name": "educ_enroll_not",
+        "cat_label": "Reasons households did not enroll boys and girls in school",
+        "unit": "%",
+        "groups": [
+          {
+            "group_name": "enrgroup_resources",
+            "group_label": "Cannot afford enrollment"
+          },
+          {
+            "group_name": "enrgroup_pregnancy",
+            "group_label": "Child was pregnant"
+          }
+        ],
+        "sub_groups": [
+          {
+            "subgroup_name": "girls",
+            "subgroup_label": "Girls"
+          },
+          {
+            "subgroup_name": "boys",
+            "subgroup_label": "Boys"
+          }
+        ],
+        "sub_indicators": {
+          "girls": [
+            {
+              "indic_name": "f_enrgroup_resources",
+              "indic_label": "Cannot afford enrollment",
+              "estimate": 0.44942325353622437,
+              "upper_bound": 0.5681498050689697,
+              "lower_bound": 0.330696702003479
+            },
+            {
+              "indic_name": "f_enrgroup_pregnancy",
+              "indic_label": "Child was pregnant",
+              "estimate": 0.04980592057108879,
+              "upper_bound": 0.08157122135162354,
+              "lower_bound": 0.018040619790554047
+            }
+          ],
+          "boys": [
+            {
+              "indic_name": "m_enrgroup_resources",
+              "indic_label": "Cannot afford enrollment",
+              "estimate": 0.421339213848114,
+              "upper_bound": 0.5182139873504639,
+              "lower_bound": 0.3244644105434418
+            }
+          ]
+        }
+      },
+      {
+        "display_type": "cat_bar",
+        "cat_name": "all_kids_enrolled_cons",
+        "cat_label": "Percent of households in which all boys or girls of school age are enrolled (conservative estimate)",
+        "unit": "%",
+        "sub_indicators": [
+          {
+            "indic_name": "all_kids_enrolled_m_cons",
+            "indic_label": "Boys",
+            "estimate": 0.7149572968482971,
+            "upper_bound": 0.7668173313140869,
+            "lower_bound": 0.6630972027778625
+          },
+          {
+            "indic_name": "all_kids_enrolled_f_cons",
+            "indic_label": "Girls",
+            "estimate": 0.7528506517410278,
+            "upper_bound": 0.8065946102142334,
+            "lower_bound": 0.6991066932678223
+          }
+        ]
+      },
+      {
+        "display_type": "cat_bar",
+        "cat_name": "educ_miss_why_f",
+        "cat_label": "Top 3 reasons why girls missed school",
+        "unit": "%",
+        "sub_indicators": [
+          {
+            "indic_name": "miss_group_f_personal",
+            "indic_label": "Personal reasons",
+            "estimate": 0.5725590586662292,
+            "upper_bound": 0.6468047499656677,
+            "lower_bound": 0.49831342697143555
+          },
+          {
+            "indic_name": "miss_group_f_resources",
+            "indic_label": "Lack of resources",
+            "estimate": 0.2685432732105255,
+            "upper_bound": 0.3509195148944855,
+            "lower_bound": 0.18616700172424316
+          },
+          {
+            "indic_name": "miss_group_f_schooldef",
+            "indic_label": "Teacher absenteeism/school capacity",
+            "estimate": 0.04877910017967224,
+            "upper_bound": 0.07979215681552887,
+            "lower_bound": 0.017766037955880165
+          }
+        ]
+      },
+      {
+        "display_type": "cat_bar",
+        "cat_name": "educ_miss_why_m",
+        "cat_label": "Top 3 reasons why boys missed school",
+        "unit": "%",
+        "sub_indicators": [
+          {
+            "indic_name": "miss_group_m_personal",
+            "indic_label": "Personal reasons",
+            "estimate": 0.5888569355010986,
+            "upper_bound": 0.6662155985832214,
+            "lower_bound": 0.5114982724189758
+          },
+          {
+            "indic_name": "miss_group_m_resources",
+            "indic_label": "Lack of resources",
+            "estimate": 0.19873039424419403,
+            "upper_bound": 0.25247758626937866,
+            "lower_bound": 0.1449832022190094
+          },
+          {
+            "indic_name": "miss_group_m_hhtasks",
+            "indic_label": "Household duties",
+            "estimate": 0.10867105424404144,
+            "upper_bound": 0.1471448540687561,
+            "lower_bound": 0.07019726186990738
+          }
+        ]
+      },
+      {
+        "display_type": "cat_bar",
+        "cat_name": "chronicmiss_dum",
+        "cat_label": "Chronic absenteeism among boys and girls (>10% of days missed in last month)",
+        "unit": "%",
+        "sub_indicators": [
+          {
+            "indic_name": "chronicmiss_f_dum",
+            "indic_label": "Girls",
+            "estimate": 0.3483847975730896,
+            "upper_bound": 0.39912548661231995,
+            "lower_bound": 0.29764410853385925
+          },
+          {
+            "indic_name": "chronicmiss_m_dum",
+            "indic_label": "Boys",
+            "estimate": 0.5473574995994568,
+            "upper_bound": 0.6046913862228394,
+            "lower_bound": 0.49002355337142944
+          }
+        ]
+      }
+    ]
+  }
+},
+"teachers": {
+  "name": "Teacher Demographics & Behaviours",
+  "collection_date": "July 2019",
+  "categories": [
+    
+  ],
+  "stakeholder_categories": [
+    "Education"
+  ],
+  "indicators": {
+    "grid_data": [
+      {
+        "indic_name": "contract_paid",
+        "indic_label": "Percent of teachers with paid contract",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.9125615954399109,
+            "upper_bound": 0.925818681716919,
+            "lower_bound": 0.8993044495582581,
+            "unit": "%"
+          },
+          "ward": [
+            {
+              "ward_code": 1,
+              "ward_name": "Ngabo",
+              "estimate": 0.7333333492279053,
+              "upper_bound": 0.8275657296180725,
+              "lower_bound": 0.6391009092330933,
+              "diff_from_others": 1.0
+            },
+            {
+              "ward_code": 2,
+              "ward_name": "Baambwe",
+              "estimate": 0.9882352948188782,
+              "upper_bound": 0.9882352948188782,
+              "lower_bound": 0.9882352948188782,
+              "diff_from_others": 1.0
+            },
+            {
+              "ward_code": 3,
+              "ward_name": "Namwala Central",
+              "estimate": 0.6785714030265808,
+              "upper_bound": 0.7164326906204224,
+              "lower_bound": 0.640710175037384,
+              "diff_from_others": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "indic_name": "absentism_rate_10_paid",
+        "indic_label": "Percent of full time teachers who were absent on more than 10% of the days in the last month",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.3346828520298004,
+            "upper_bound": 0.4670046865940094,
+            "lower_bound": 0.20236103236675262,
+            "unit": "%"
+          }
+        }
+      },
+      {
+        "indic_name": "absentism_rate_10_volunteer",
+        "indic_label": "Percent of volunteer teachers who were absent on more than 10% of the days in the last month",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.6015625,
+            "upper_bound": 0.6015625,
+            "lower_bound": 0.6015625,
+            "unit": "%"
+          }
+        }
+      }
+    ],
+    "cat_bar_data": [
+      {
+        "display_type": "cat_bar",
+        "cat_name": "absentism_rate_10",
+        "cat_label": "Percent of teachers who were absent on more than 10% of days in the last month",
+        "unit": "%",
+        "sub_indicators": [
+          {
+            "indic_name": "absentism_rate_10",
+            "indic_label": "All teachers",
+            "estimate": 0.35283249616622925,
+            "upper_bound": 0.4731247127056122,
+            "lower_bound": 0.2325403243303299
+          },
+          {
+            "indic_name": "absentism_rate_10_m",
+            "indic_label": "Males",
+            "estimate": 0.24271844327449799,
+            "upper_bound": 0.4047977924346924,
+            "lower_bound": 0.08063909411430359
+          },
+          {
+            "indic_name": "absentism_rate_10_f",
+            "indic_label": "Females",
+            "estimate": 0.4992826282978058,
+            "upper_bound": 0.6705893278121948,
+            "lower_bound": 0.32797595858573914
+          }
+        ]
+      }
+    ]
+  }
+},
+"school_infrastructure": {
+  "name": "School Infrastructure",
+  "collection_date": "July 2019",
+  "categories": [
+    
+  ],
+  "stakeholder_categories": [
+    "Education"
+  ],
+  "indicators": {
+    "grid_data": [
+      {
+        "indic_name": "room_elec",
+        "indic_label": "Percent of schools with access to the electrical grid or solar power",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.2777777910232544,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "School has access to the electrical grid or solar power",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 12,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "inf_blocks",
+        "indic_label": "Average classroom blocks per school",
+        "values": {
+          "chiefdom": {
+            "estimate": 3.277777671813965,
+            "unit": ""
+          },
+          "school": {
+            "indic_label": "Total classroom blocks",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 14,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 3.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 11.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 6.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 19.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "num_improved_floors",
+        "indic_label": "Average classroom blocks with improved floors per school",
+        "values": {
+          "chiefdom": {
+            "estimate": 2.777777671813965,
+            "unit": ""
+          },
+          "school": {
+            "indic_label": "Total classroom blocks with improved floors",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 14,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 12,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 10,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 13,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 6,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 9,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 15,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 3,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 2,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 18,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 11,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 5,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 7,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 4,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 1,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 3.0,
+                "block_total": 3.0
+              },
+              {
+                "school_code": 8,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 11.0,
+                "block_total": 11.0
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 6.0,
+                "block_total": 6.0
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 19.0,
+                "block_total": 19.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "num_improved_walls",
+        "indic_label": "Total classroom blocks with improved walls",
+        "values": {
+          "chiefdom": {
+            "estimate": 2.8333332538604736,
+            "unit": ""
+          },
+          "school": {
+            "indic_label": "Total classroom blocks with improved walls",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 10,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 13,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 14,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 6,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 9,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 12,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 3,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 15,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 5,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 2,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 11,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 4,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 7,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 18,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 1,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 3.0,
+                "block_total": 3.0
+              },
+              {
+                "school_code": 8,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 11.0,
+                "block_total": 11.0
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 6.0,
+                "block_total": 6.0
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 19.0,
+                "block_total": 19.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "num_roofs_weather_res",
+        "indic_label": "Average classroom blocks with weather-resistant roofs per school",
+        "values": {
+          "chiefdom": {
+            "estimate": 2.8888888359069824,
+            "unit": ""
+          },
+          "school": {
+            "indic_label": "Total classroom blocks with weather-resistant roofs",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 13,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 12,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 14,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 9,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 6,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 15,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 3,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 10,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": 1.0
+              },
+              {
+                "school_code": 2,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 18,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 11,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 5,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 7,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 4,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 2.0,
+                "block_total": 2.0
+              },
+              {
+                "school_code": 1,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 3.0,
+                "block_total": 3.0
+              },
+              {
+                "school_code": 8,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 11.0,
+                "block_total": 11.0
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 6.0,
+                "block_total": 6.0
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 19.0,
+                "block_total": 19.0
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "per_room_board",
+        "indic_label": "Percent of classrooms that have a board",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.8185185194015503,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "Percent of classrooms that have a board",
+            "unit": "%",
+            "values": [
+              {
+                "school_code": 12,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.4000000059604645,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.8333333134651184,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "per_room_desks",
+        "indic_label": "Percent of classrooms that have desks for all students",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.5084174871444702,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "Percent of classrooms that have desks for all students",
+            "unit": "%",
+            "values": [
+              {
+                "school_code": 6,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.3333333432674408,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.8181818127632141,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "per_room_sit",
+        "indic_label": "Percent of classrooms that have chairs for all students",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.20749157667160034,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "Percent of classrooms that have chairs for all students",
+            "unit": "%",
+            "values": [
+              {
+                "school_code": 3,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.3333333432674408,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.8181818127632141,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.0833333358168602,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "per_washing_nearby",
+        "indic_label": "Percent of toilet facilities with handwashing facilities nearby",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.550000011920929,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "Percent of toilet facilities with handwashing facilities nearby",
+            "unit": "%",
+            "values": [
+              {
+                "school_code": 10,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.3333333432674408,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.75,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0833333358168602,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.7333333492279053,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "per_washing_nearby_soap",
+        "indic_label": "Percent of handwashing facilities that have soap",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.25466200709342957,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "Percent of handwashing facilities that have soap",
+            "unit": "%",
+            "values": [
+              {
+                "school_code": 3,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.5454545617103577,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 0.03846153989434242,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "per_washing_nearby_water",
+        "indic_label": "Percent of handwashing facilities that have water",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.3717948794364929,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "Percent of handwashing facilities that have water",
+            "unit": "%",
+            "values": [
+              {
+                "school_code": 13,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.19230769574642181,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "student_toilet_ratio",
+        "indic_label": "Average students per toilet facility",
+        "values": {
+          "chiefdom": {
+            "estimate": 70.50092315673828,
+            "unit": ""
+          },
+          "school": {
+            "indic_label": "Average students per toilet facility",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 3,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 18.83333396911621,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 28.75,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 30.66666603088379,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 33.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 34.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 39.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 44.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 54.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 26.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 27.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 60.20000076293945,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 80.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 84.80000305175781,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 133.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 144.26666259765625,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 163.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 62.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 203.5,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "vip_flush_per",
+        "indic_label": "Percent of toilet facilities that are VIP latrines or flush toilets",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.6314814686775208,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "Percent of toilet facilities that are VIP latrines or flush toilets",
+            "unit": "%",
+            "values": [
+              {
+                "school_code": 12,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.20000000298023224,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.3333333432674408,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.8333333134651184,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "cat_bar_data": [
+      
+    ]
+  }
+},
+"school_capacity": {
+  "name": "School Capacity",
+  "collection_date": "July 2019",
+  "categories": [
+    
+  ],
+  "stakeholder_categories": [
+    "Education"
+  ],
+  "indicators": {
+    "grid_data": [
+      {
+        "indic_name": "enrolled_per_f",
+        "indic_label": "Percent of enrolled students who are girls",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.5055938959121704,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "Percent of enrolled students who are girls",
+            "unit": "%",
+            "values": [
+              {
+                "school_code": 9,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.417391300201416,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.46464645862579346,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.47826087474823,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.483146071434021,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.5412843823432922,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.54347825050354,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.5575221180915833,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.5705128312110901,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.47756409645080566,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.4787735939025879,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.5076452493667603,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.5150375962257385,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.521212100982666,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.53125,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.5341959595680237,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.5382059812545776,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.4123076796531677,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 0.5282555222511292,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "cap_payment",
+        "indic_label": "Average children per school who wanted to enroll in the current term but could not afford school fees",
+        "values": {
+          "chiefdom": {
+            "estimate": 11.4375,
+            "unit": ""
+          },
+          "school": {
+            "indic_label": "Total children who wanted to enroll in the current term but could not afford school fees",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 15,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 4.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 7.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 10.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 18.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 26.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 88.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": "",
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": "",
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 30.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "cap_space",
+        "indic_label": "Average children per school who wanted to enroll in the current term but the school didn't have capacity",
+        "values": {
+          "chiefdom": {
+            "estimate": 10.277777671813965,
+            "unit": ""
+          },
+          "school": {
+            "indic_label": "Total children who wanted to enroll in the current term but the school didn't have capacity",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 14,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 10.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 15.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 30.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 7.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 15.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 20.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 25.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 48.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 15.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "housing_cap_per",
+        "indic_label": "Percent of teachers who live in staff housing",
+        "values": {
+          "chiefdom": {
+            "estimate": 0.2383761703968048,
+            "unit": "%"
+          },
+          "school": {
+            "indic_label": "Percent of teachers who live in staff housing",
+            "unit": "%",
+            "values": [
+              {
+                "school_code": 10,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.1538461595773697,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.20930232107639313,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 0.25,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.4285714328289032,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 0.75,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 0.32258063554763794,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 0.6764705777168274,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "teach_count_check",
+        "indic_label": "Average teachers per school",
+        "values": {
+          "chiefdom": {
+            "estimate": 12.88888931274414,
+            "unit": ""
+          },
+          "school": {
+            "indic_label": "Total teachers",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 6,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 1.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 2.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 3.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 3,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 3.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 4.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 4.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 6.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 9.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 10.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 14.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 26.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 43.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 31.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 68.0,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "indic_name": "teacher_student_ratio",
+        "indic_label": "Average students per teacher",
+        "values": {
+          "chiefdom": {
+            "estimate": 47.199180603027344,
+            "unit": ""
+          },
+          "school": {
+            "indic_label": "Average students per teacher",
+            "unit": "",
+            "values": [
+              {
+                "school_code": 3,
+                "school_name": "Malembela Com",
+                "school_type": "Community: Primary",
+                "estimate": 37.66666793823242,
+                "block_total": ""
+              },
+              {
+                "school_code": 9,
+                "school_name": "Mazhiba Pri",
+                "school_type": "Community: Primary",
+                "estimate": 38.33333206176758,
+                "block_total": ""
+              },
+              {
+                "school_code": 10,
+                "school_name": "Kaumbwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 44.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 12,
+                "school_name": "Ngabo Pri",
+                "school_type": "Government: Primary",
+                "estimate": 49.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 14,
+                "school_name": "Namankubaula Com",
+                "school_type": "Community: Primary",
+                "estimate": 54.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 15,
+                "school_name": "Naminwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 69.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 13,
+                "school_name": "Inongwe Com",
+                "school_type": "Community: Primary",
+                "estimate": 78.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 6,
+                "school_name": "Muzoka Com",
+                "school_type": "Community: Primary",
+                "estimate": 92.0,
+                "block_total": ""
+              },
+              {
+                "school_code": 1,
+                "school_name": "Inongwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 30.285715103149414,
+                "block_total": ""
+              },
+              {
+                "school_code": 5,
+                "school_name": "Baambwe Pri",
+                "school_type": "Government: Primary",
+                "estimate": 30.69230842590332,
+                "block_total": ""
+              },
+              {
+                "school_code": 4,
+                "school_name": "Chibunze Pri",
+                "school_type": "Government: Primary",
+                "estimate": 31.200000762939453,
+                "block_total": ""
+              },
+              {
+                "school_code": 18,
+                "school_name": "Kalundu Pri",
+                "school_type": "Government: Primary",
+                "estimate": 35.55555725097656,
+                "block_total": ""
+              },
+              {
+                "school_code": 11,
+                "school_name": "Maseele Com",
+                "school_type": "Community: Primary",
+                "estimate": 41.25,
+                "block_total": ""
+              },
+              {
+                "school_code": 8,
+                "school_name": "Namwala Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 50.32558059692383,
+                "block_total": ""
+              },
+              {
+                "school_code": 2,
+                "school_name": "Lubanga Pri",
+                "school_type": "Government: Primary",
+                "estimate": 54.5,
+                "block_total": ""
+              },
+              {
+                "school_code": 7,
+                "school_name": "Kawilizhi Pri",
+                "school_type": "Government: Primary",
+                "estimate": 75.25,
+                "block_total": ""
+              },
+              {
+                "school_code": 17,
+                "school_name": "Namwala Central Sec",
+                "school_type": "Government: Secondary",
+                "estimate": 13.129032135009766,
+                "block_total": ""
+              },
+              {
+                "school_code": 16,
+                "school_name": "Namwala Central Com Taonga",
+                "school_type": "Community: Primary",
+                "estimate": 23.897058486938477,
+                "block_total": ""
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "cat_bar_data": [
+      
+    ]
+  }
+},
+"school_challenges": {
+  "name": "School Challenges",
+  "collection_date": "July 2019",
+  "categories": [
+    
+  ],
+  "stakeholder_categories": [
+    "Education"
+  ],
+  "indicators": {
+    "grid_data": [
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 10,
+        "school_name": "Ngabo Pri",
+        "values": {
+          "challenge1": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge2": "Insufficient amount of housing for teachers",
+          "challenge3": "Insufficient quality of learning infrastructure (classrooms)"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 6,
+        "school_name": "Kaumbwe Com",
+        "values": {
+          "challenge1": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge2": "Insufficient quality of learning infrastructure (classrooms)",
+          "challenge3": "Parents not coorperative"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 12,
+        "school_name": "Mazhiba Pri",
+        "values": {
+          "challenge1": "Insufficient quality of learning infrastructure (classrooms)",
+          "challenge2": "Insufficient quality of housing for teachers",
+          "challenge3": "Payments for Teachers"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 9,
+        "school_name": "Malembela Com",
+        "values": {
+          "challenge1": "Insufficient quality of learning infrastructure (classrooms)",
+          "challenge2": "Insufficient quality of learning resources (textbooks, chalk, etc.)",
+          "challenge3": "Insufficient quality of sanitation facilities (toilets)"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 15,
+        "school_name": "Naminwe Com",
+        "values": {
+          "challenge1": "Insufficient quality of learning infrastructure (classrooms)",
+          "challenge2": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge3": "Insufficient amount of housing for teachers"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 3,
+        "school_name": "Inongwe Com",
+        "values": {
+          "challenge1": "Insufficient quality of housing for teachers",
+          "challenge2": "Insufficient quality of learning infrastructure (classrooms)",
+          "challenge3": "Not enough teachers"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 14,
+        "school_name": "Namankubaula Com",
+        "values": {
+          "challenge1": "Insufficient quality of housing for teachers",
+          "challenge2": "Insufficient quality of learning infrastructure (classrooms)",
+          "challenge3": "Insufficient number of learning resources (textbooks, chalk, etc.)"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 13,
+        "school_name": "Muzoka Com",
+        "values": {
+          "challenge1": "Parents not coorperative",
+          "challenge2": "Insufficient quality of learning infrastructure (classrooms)",
+          "challenge3": "Insufficient quality of learning resources (textbooks, chalk, etc.)"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 18,
+        "school_name": "Namwala Sec",
+        "values": {
+          "challenge1": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge2": "Insufficient quality of learning resources (textbooks, chalk, etc.)",
+          "challenge3": "Insufficient quality of housing for teachers"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 2,
+        "school_name": "Chibunze Pri",
+        "values": {
+          "challenge1": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge2": "Insufficient quality of housing for teachers",
+          "challenge3": "Not enough teachers"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 7,
+        "school_name": "Kawilizhi Pri",
+        "values": {
+          "challenge1": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge2": "Insufficient quality of housing for teachers",
+          "challenge3": "Insufficient quality of sanitation facilities (toilets)"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 11,
+        "school_name": "Maseele Com",
+        "values": {
+          "challenge1": "Insufficient quality of learning infrastructure (classrooms)",
+          "challenge2": "Not enough teachers",
+          "challenge3": "Education Apathy"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 5,
+        "school_name": "Kalundu Pri",
+        "values": {
+          "challenge1": "Insufficient quality of sanitation facilities (toilets)",
+          "challenge2": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge3": "."
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 1,
+        "school_name": "Baambwe Pri",
+        "values": {
+          "challenge1": "Insufficient quality of sanitation facilities (toilets)",
+          "challenge2": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge3": "Insufficient amount of housing for teachers"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 8,
+        "school_name": "Lubanga Pri",
+        "values": {
+          "challenge1": "Insufficient quality of sanitation facilities (toilets)",
+          "challenge2": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge3": "Insufficient quality of learning resources (textbooks, chalk, etc.)"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 4,
+        "school_name": "Inongwe Pri",
+        "values": {
+          "challenge1": "Insufficient quality of housing for teachers",
+          "challenge2": "Insufficient quality of learning infrastructure (classrooms)",
+          "challenge3": "Insufficient quality of sanitation facilities (toilets)"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 16,
+        "school_name": "Namwala Central Com Taonga",
+        "values": {
+          "challenge1": "Insufficient number of learning infrastructure (classrooms)",
+          "challenge2": "Insufficient amount of housing for teachers",
+          "challenge3": "Insufficient quality of learning infrastructure (classrooms)"
+        }
+      },
+      {
+        "indic_label": "Top 3 challenges faced by the school",
+        "school_code": 17,
+        "school_name": "Namwala Central Sec",
+        "values": {
+          "challenge1": "Insufficient quality of sanitation facilities (toilets)",
+          "challenge2": "Insufficient quality of housing for teachers",
+          "challenge3": "Insufficient quality of learning infrastructure (classrooms)"
+        }
+      }
+    ]
+  }
+}
+
+
+
+
+
 }

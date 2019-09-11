@@ -1,40 +1,87 @@
 [
   {
     "organization": "Development Aid from People to People",
-    "contact_person": "Machainda Alex",
-    "contact_position": "District Cordinator",
-    "contact_phone": "260979494625",
-    "contact_email": "",
+    "acronym": "DAPP",
+    "contact": [
+      {
+        "contact_person": "Machainda Alex",
+        "contact_position": "District Coordinator",
+        "contact_phone": "260979494625",
+        "contact_email": ""
+      },
+      {
+        "contact_person": "Clifford Chibomboma",
+        "contact_position": "",
+        "contact_phone": "260969121541",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "General"
     ]
   },
   {
+    "organization": "Development Aid from People to People",
+    "acronym": "DAPP",
+    "contact": [
+      {
+        "contact_person": "Machainda Alex",
+        "contact_position": "District Coordinator",
+        "contact_phone": "260979494625",
+        "contact_email": ""
+      },
+      {
+        "contact_person": "Clifford Chibomboma",
+        "contact_position": "",
+        "contact_phone": "260969121541",
+        "contact_email": ""
+      }
+    ],
+    "app_categories": [
+      ""
+    ]
+  },
+  {
     "organization": "Self Help Africa",
-    "contact_person": "Mr. Muzambalika",
-    "contact_position": "District Cordinator",
-    "contact_phone": "260967878196",
-    "contact_email": "",
+    "acronym": "SHA",
+    "contact": [
+      {
+        "contact_person": "Mr. Muzambalika",
+        "contact_position": "District Coordinator",
+        "contact_phone": "260967878196",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "Agriculture"
     ]
   },
   {
-    "organization": "University of Maryland",
-    "contact_person": "",
-    "contact_position": "",
-    "contact_phone": "",
-    "contact_email": "",
+    "organization": "University of Maryland in Zambia",
+    "acronym": "",
+    "contact": [
+      {
+        "contact_person": "",
+        "contact_position": "",
+        "contact_phone": "260211255773",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "HIV"
     ]
   },
   {
     "organization": "World Vision",
-    "contact_person": "Siavwapa Yabi",
-    "contact_position": "Manager",
-    "contact_phone": "260977835163",
-    "contact_email": "",
+    "acronym": "WVI",
+    "contact": [
+      {
+        "contact_person": "Siavwapa Yabi",
+        "contact_position": "Manager",
+        "contact_phone": "260977835163",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "Health",
       "Agriculture",
@@ -45,100 +92,220 @@
   },
   {
     "organization": "Network of Zambian People Living with HIV/AIDS",
-    "contact_person": "Madam Ruth",
-    "contact_position": "District Cordinator",
-    "contact_phone": "260963337540",
-    "contact_email": "",
+    "acronym": "NZP+",
+    "contact": [
+      {
+        "contact_person": "Madam Ruth",
+        "contact_position": "District Coordinator",
+        "contact_phone": "260963337540",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "HIV"
     ]
   },
   {
     "organization": "The Friends\u2019 Association Namwala Secondary",
-    "contact_person": "",
-    "contact_position": "",
-    "contact_phone": "",
-    "contact_email": "",
+    "acronym": "",
+    "contact": [
+      {
+        "contact_person": "Johannes Van Der Weijden",
+        "contact_position": "Founder",
+        "contact_phone": "41417612409",
+        "contact_email": "van.der.weijden@bluewin.ch"
+      }
+    ],
     "app_categories": [
       "Education"
     ]
   },
   {
     "organization": "Namwala District Health Office",
-    "contact_person": "Dr. Nkhole",
-    "contact_position": "District Health Director (DHD)",
-    "contact_phone": "260966517423",
-    "contact_email": "",
+    "acronym": "Namwala DHO",
+    "contact": [
+      {
+        "contact_person": "Dr. Nkole",
+        "contact_position": "District Health Director (DHD)",
+        "contact_phone": "260966517423",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "Health"
     ]
   },
   {
     "organization": "Namwala District Education Board Secretariat",
-    "contact_person": "Mrs. Chikuba",
-    "contact_position": "Namwala District Education Board Secretary (DEBS)",
-    "contact_phone": "260955101132",
-    "contact_email": "",
+    "acronym": "Namwala DEBS",
+    "contact": [
+      {
+        "contact_person": "Mrs. Chikuba",
+        "contact_position": "Namwala District Education Board Secretary (DEBS)",
+        "contact_phone": "260955101132",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "Education"
     ]
   },
   {
     "organization": "Ministry of Chiefs and Traditional Affairs",
-    "contact_person": "Mr. Mwendabai",
-    "contact_position": "District Chiefs and Traditional Affairs Officer (DCTAO)",
-    "contact_phone": "260977707827",
-    "contact_email": "",
+    "acronym": "MOCTA",
+    "contact": [
+      
+    ],
     "app_categories": [
       "General"
     ]
   },
   {
     "organization": "Office of the District Commissioner",
-    "contact_person": "Madam Mary Sakala",
-    "contact_position": "District Commissioner",
-    "contact_phone": "260978170391",
-    "contact_email": "",
+    "acronym": "DC",
+    "contact": [
+      {
+        "contact_person": "Madam Mary Sakala",
+        "contact_position": "District Commissioner",
+        "contact_phone": "260978170391",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "General"
     ]
   },
   {
     "organization": "Namwala District Council",
-    "contact_person": "Mr. Frank Kalenga",
-    "contact_position": "Council Secretary",
-    "contact_phone": "260966199038",
-    "contact_email": "",
+    "acronym": "",
+    "contact": [
+      {
+        "contact_person": "Mr. Frank Kalenga",
+        "contact_position": "Council Secretary",
+        "contact_phone": "260966199038",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "General"
     ]
   },
   {
     "organization": "Ministry of Agriculture",
-    "contact_person": "Mr. Martin Sikainga",
-    "contact_position": "District Agricultural Coordinator",
-    "contact_phone": "260977577796",
-    "contact_email": "",
+    "acronym": "MOA",
+    "contact": [
+      {
+        "contact_person": "Mr. Martin Sikainga",
+        "contact_position": "District Agricultural Coordinator",
+        "contact_phone": "260977577796",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "Agriculture"
     ]
   },
   {
     "organization": "Ministry of Fisheries and Livestock",
-    "contact_person": "Dr. Showa",
-    "contact_position": "District Veterinary Officer",
-    "contact_phone": "260977697606",
-    "contact_email": "",
+    "acronym": "MFL",
+    "contact": [
+      {
+        "contact_person": "Dr. Showa",
+        "contact_position": "District Veterinary Officer",
+        "contact_phone": "260977697606",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "Agriculture"
     ]
   },
   {
     "organization": "Ministry of Community Development and Social Services",
-    "contact_person": "Mrs. Evelyn Sikainga",
-    "contact_position": "District Community Development Officer (DCDO)",
-    "contact_phone": "260977711954",
-    "contact_email": "",
+    "acronym": "MCDSS",
+    "contact": [
+      {
+        "contact_person": "Mrs. Evelyn Sikainga",
+        "contact_position": "District Community Development Officer (DCDO)",
+        "contact_phone": "260977711954",
+        "contact_email": ""
+      }
+    ],
+    "app_categories": [
+      "General"
+    ]
+  },
+  {
+    "organization": "Musika Development Initiative",
+    "acronym": "Musika",
+    "contact": [
+      {
+        "contact_person": "Enock Siankwilimba",
+        "contact_position": "Regional manager",
+        "contact_phone": "260977707976",
+        "contact_email": "enock@musika.org.zm"
+      }
+    ],
+    "app_categories": [
+      "Agriculture"
+    ]
+  },
+  {
+    "organization": "IAPRI",
+    "acronym": "",
+    "contact": [
+      {
+        "contact_person": "Chance Kabaghe",
+        "contact_position": "Executive director",
+        "contact_phone": "",
+        "contact_email": "chance.kabaghe@iapri.org.zm"
+      }
+    ],
+    "app_categories": [
+      "Agriculture"
+    ]
+  },
+  {
+    "organization": "SEEDCO",
+    "acronym": "",
+    "contact": [
+      {
+        "contact_person": "Simanego",
+        "contact_position": "Regional manager",
+        "contact_phone": "206077637576",
+        "contact_email": ""
+      }
+    ],
+    "app_categories": [
+      "Agriculture"
+    ]
+  },
+  {
+    "organization": "Baobridge",
+    "acronym": "",
+    "contact": [
+      {
+        "contact_person": "Gwen Martinez",
+        "contact_position": "CEO",
+        "contact_phone": "16024810672",
+        "contact_email": "gwen@baobridge.com"
+      }
+    ],
+    "app_categories": [
+      "General"
+    ]
+  },
+  {
+    "organization": "UNDP",
+    "acronym": "",
+    "contact": [
+      {
+        "contact_person": "Melody Chali",
+        "contact_position": "Research assistant",
+        "contact_phone": "260977695151",
+        "contact_email": ""
+      }
+    ],
     "app_categories": [
       "General"
     ]

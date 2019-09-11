@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ART, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, View, ART, Dimensions, TouchableWithoutFeedback, AppState } from 'react-native';
 
 const {
   Surface,
@@ -43,8 +43,17 @@ const colours = {
   brown: 'brown'
 }
 
+// const data = [
+//   {frequency: 5, letter: 'a'},
+//   {frequency: 6, letter: 'b'},
+//   {frequency: 4, letter: 'c'},
+//   {frequency: 1, letter: 'd'},
+//   {frequency: 2, letter: 'e'},
+//   {frequency: 3, letter: 'f'}
+// ];
 
-export default class ReasonsChart extends React.Component {
+
+export default class SchoolChart extends React.Component {
 
   constructor(props) {
     super(props);
@@ -78,20 +87,35 @@ export default class ReasonsChart extends React.Component {
       f = d3Format(".0%");
       return f(value)
     }
+    else if (name==='hh_surveyed' || name==='cap_payment' || name==='cap_space' || name==='teach_count_check' || name==='inf_blocks' || name==='num_improved_floors' || name==='num_improved_walls' || name==='num_roofs_weather_res') {
+      f = d3Format("d");
+      return f(value);
+    }
+    else if (name==='room_elec') {
+      if (value===0) {
+        return 'No';
+      }
+      else if (value===1) {
+        return 'Yes';
+      }
+    }
     else {
       f = d3Format(".1f");
       return f(value)
     }
   }
-  
+
   formatLabel(name,value,unit) {
     if (unit==='%') {
       f = d3Format(".1%");
       return f(value)
     }
-    else if (name==='hh_surveyed') {
+    else if (name==='hh_surveyed' || name==='cap_payment' || name==='cap_space' || name==='teach_count_check' || name==='inf_blocks' || name==='num_improved_floors' || name==='num_improved_walls' || name==='num_roofs_weather_res') {
       f = d3Format("d");
       return f(value);
+    }
+    else if (name==='room_elec') {
+      return ''
     }
     else {
       f = d3Format(".1f");
@@ -99,53 +123,68 @@ export default class ReasonsChart extends React.Component {
     }
   }
 
-  getLabeldy(name) {
-    if (name==="Reasons households gave for choosing to pay for the daughter's education in the vignette") {
-      return -50;
-    }
-    else {
-      return -35
-    }
-  }
-
   render() {
     const screen = Dimensions.get('window');
-    let margin = {top: 90, right: 55, bottom: 300, left: 300};
-
-    const cat_name = this.props.data.reasons.reasons_label;
-    
-    if (cat_name==="Reasons households gave for choosing to pay for the daughter's education in the vignette") {
-      margin = {top: 110, right: 55, bottom: 200, left: 400};
-    }
-
-    const width = screen.width - margin.left - margin.right;
-    const height = screen.height - margin.top - margin.bottom;
-    const data = this.props.data.reasons.reasons_indicators;
-    const unit = this.props.data.reasons.unit;
-
+    const margin = {top: 50, right: 25, bottom: 300, left: 175}
+    const width = screen.width - margin.left - margin.right
+    const height = screen.height - margin.top - margin.bottom
+    const data = this.props.data.values.school.values;
+    const unit = this.props.data.values.school.unit;
+    const indic_name = this.props.data.indic_name;
     let xAxisLabel;
 
-    if (cat_name==='r1_literacy_test') {
-      xAxisLabel = 'Percent of respondents';
+    if (indic_name==='enrolled_per_f') {
+      xAxisLabel = 'Percent girls';
     }
-    else {
-      xAxisLabel = 'Percent of households';
+    else if (indic_name===indic_name==='vip_flush_per') {
+      xAxisLabel = 'Percent of facilities';
+    }
+    else if (indic_name==='cap_payment' || indic_name==='cap_space' || indic_name==='r1_sec_dry_time_hr_w1' || indic_name==='r1_sec_rainy_time_hr_w1' || indic_name==='r1_high_dry_time_hr_w1' || indic_name==='r1_high_rainy_time_hr_w1' || indic_name==='r1_hea_dry_time_hr_w1' || indic_name==='r1_hea_rainy_time_hr_w1') {
+      xAxisLabel = 'Total children';
+    }
+    else if (indic_name==='housing_cap_per') {
+      xAxisLabel = 'Percent of teachers';
+    }
+    else if (indic_name==='teach_count_check') {
+      xAxisLabel = 'Total teachers';
+    }
+    else if (indic_name==='teacher_student_ratio') {
+      xAxisLabel = 'Average students per teacher';
+    }
+    else if (indic_name==='room_elec') {
+      xAxisLabel = '';
+    }
+    else if (indic_name==='inf_blocks' || indic_name==='num_improved_floors' || indic_name==='num_improved_walls' || indic_name==='num_roofs_weather_res') {
+      xAxisLabel = 'Total blocks';
+    }
+    else if (indic_name==='per_room_board' || indic_name==='per_room_desks' || indic_name==='per_room_sit') {
+      xAxisLabel = 'Percent of classrooms';
+    }
+    else if (indic_name==='per_washing_nearby') {
+      xAxisLabel = 'Percent of toilet facilities';
+    }
+    else if (indic_name==='per_washing_nearby_soap' || indic_name==='per_washing_nearby_water') {
+      xAxisLabel = 'Percent of handwashing facilities';
+    }
+    else if (indic_name==='student_toilet_ratio') {
+      xAxisLabel = 'Average students'
     }
 
     const y = d3.scale.scaleBand()
       .rangeRound([0, height])
       .padding(0.1)
-      .domain(data.map(d => d.indic_name))
+      .domain(data.map(d => d.school_code))
 
-    const maxX = max(data, d => d.upper_bound*1.2)
+    const maxX = max(data, d => d.estimate*1.2)
 
     const x = d3.scale.scaleLinear()
       .rangeRound([0, width])
       .domain([0, maxX])
 
-    const firstLetterY = y(data[0].indic_name)
-    const secondLetterY = y(data[1].indic_name)
-    const lastLetterY = y(data[data.length - 1].indic_name)
+
+    const firstLetterY = y(data[0].school_code)
+    const secondLetterY = y(data[1].school_code)
+    const lastLetterY = y(data[data.length - 1].school_code)
     const labelDy = (secondLetterY - firstLetterY) / 2
 
     const leftAxis = [lastLetterY + labelDy, firstLetterY - labelDy]
@@ -155,24 +194,24 @@ export default class ReasonsChart extends React.Component {
       .x(() => 0)
       (leftAxis)
 
-    const bottomAxis = ticks(0, maxX, 5)
+    let bottomAxis = ticks(0, maxX, 5)
 
-    const bottomAxisD = d3.shape.line()
+    if (indic_name==='room_elec') {
+      bottomAxis = ticks(0, 1, 2)
+    }
+
+    let bottomAxisD = d3.shape.line()
       .y(() => height - labelDy - 2)
       .x(d => x(d))
       (bottomAxis)
+
+
 
     const notch = 5;
     const labelDistance = 6;
     const emptySpace = "";
 
     const xFormat = d3Format(".1f");
-
-    let xAxisLabeldy = 0;
-    
-    if (cat_name==="Reasons households gave for choosing to pay for the daughter's education in the vignette") {
-      xAxisLabeldy = 150;
-    }
 
     return(
       <View>
@@ -184,19 +223,19 @@ export default class ReasonsChart extends React.Component {
             {
             data.map((d, i) =>(
               <Group
-                y={y(d.indic_name)}
+                y={y(d.school_code)}
                 x={0}
                 key={i + 1}
               >
                 <Shape d={this.drawLine(-notch, 0)} stroke={colours.black}/>
                 <Text
-                  y={-15}
-                  x={-15}
+                  y={-12}
+                  x={-9}
                   fill={colours.black}
                   font="24px Arial"
                   alignment="right"
                 >
-                  {d.indic_label + emptySpace}
+                  {d.school_name + emptySpace}
                 </Text>
               </Group>
             ))
@@ -215,7 +254,7 @@ export default class ReasonsChart extends React.Component {
                   font="20px Arial"
                   alignment='center'
                 >
-                  {this.formatValue(cat_name,d,unit)}
+                  {this.formatValue(indic_name,d,unit)}
                 </Text>
               </Group>
             ))
@@ -224,7 +263,7 @@ export default class ReasonsChart extends React.Component {
                 <Text
                   fill={colours.black}
                   x={0}
-                  y={-20 - xAxisLabeldy}
+                  y={0}
                   font="24px Arial"
                   alignment='center'
                 >
@@ -232,24 +271,12 @@ export default class ReasonsChart extends React.Component {
                 </Text>
             </Group>
           </Group>
-          {
-          data.map((d, i) => (
-            
-            <Group x={x(d.lower_bound < 0 ? 0 : d.lower_bound)} y={y(d.indic_name)} key={i} >
-              <Shape
-                d={this.drawLine(x(d.upper_bound - (d.lower_bound < 0 ? 0 : d.lower_bound)),0)}
-                strokeWidth={3}
-                stroke={'rgb(200,200,200'}
-              >
-              </Shape>
-            </Group>
-          ))
-          }
+          
 
           {
           data.map((d, i) => (
             
-            <Group x={x(d.estimate)} y={y(d.indic_name)} key={i} >
+            <Group x={x(d.estimate)} y={y(d.school_code)} key={i} >
               <Shape
                 d={this.drawCircle(y.bandwidth())}
                 fill={'#4088d5'}
@@ -258,13 +285,14 @@ export default class ReasonsChart extends React.Component {
               <Text
                 fill={colours.black}
                 x={0}
-                y={this.getLabeldy(cat_name)}
+                y={-35}
                 font="20px Arial"
                 alignment='center'
               >
-                {this.formatLabel(cat_name,d.estimate,unit)}
+                {this.formatLabel(indic_name,d.estimate,unit)}
 
               </Text>
+
             </Group>
           ))
           }
@@ -281,7 +309,7 @@ const styles = {
     margin: 20,
   },
   label: {
-    fontSize: 12,
+    fontSize: 15,
     marginTop: 5,
     fontWeight: 'normal',
   }
