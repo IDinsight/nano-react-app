@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, View, List } from 'react-native';
 import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
+import * as Segment from 'expo-analytics-segment';
 
 export default class ViewScreen extends React.Component {
   static navigationOptions = {
@@ -9,6 +10,7 @@ export default class ViewScreen extends React.Component {
   };
 
   render() {
+    Segment.screen('View Screen');
     const {navigate} = this.props.navigation;
     const data = {
       modules: [
@@ -24,8 +26,38 @@ export default class ViewScreen extends React.Component {
         },
         {
           key: 'health_behaviours',
-          name: 'Health Behaviours',
+          name: 'Health Beliefs & Behaviours',
           date: 'April 2019'
+        },
+        {
+          key: 'marriage_beliefs_behaviours',
+          name: 'Marriage Beliefs & Behaviours',
+          date: 'July 2019'
+        },
+        {
+          key: 'education_beliefs_behaviours',
+          name: 'Education Beliefs & Behaviours',
+          date: 'July 2019'
+        },
+        {
+          key: 'teachers',
+          name: 'Teacher Demographics & Behaviours',
+          date: 'July 2019'
+        },
+        {
+          key: 'school_capacity',
+          name: 'School Capacity',
+          date: 'July 2019'
+        },
+        {
+          key: 'school_infrastructure',
+          name: 'School Infrastructure',
+          date: 'July 2019'
+        },
+        {
+          key: 'school_challenges',
+          name: 'School Challenges',
+          date: 'July 2019'
         },
       ]
     };

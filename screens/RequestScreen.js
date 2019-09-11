@@ -6,6 +6,7 @@ import {
   View,
 } from 'react-native';
 import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
+import * as Segment from 'expo-analytics-segment';
 
 export default class RequestScreen extends React.Component {
   static navigationOptions = {
@@ -13,6 +14,7 @@ export default class RequestScreen extends React.Component {
   };
 
   render() {
+    Segment.screen('Request Screen');
     return (
       <ScrollView style={styles.container}>
           <View style={styles.getStartedContainer}>

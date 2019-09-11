@@ -115,6 +115,33 @@ export default class CatBarChart extends React.Component {
     else if (cat_name==='r1_wat_treat') {
       margin = {top: 50, right: 70, bottom: 90, left: 185};
     }
+    else if (cat_name==='marr_age') {
+      margin = {top: 50, right: 70, bottom: 60, left: 120};
+    }
+    else if (cat_name==='all_kids_enrolled_cons' || cat_name==='chronicmiss_dum') {
+      margin = {top: 60, right: 70, bottom: 60, left: 100};
+    }
+    else if (cat_name==='marr_age_why') {
+      margin = {top: 60, right: 60, bottom: 90, left: 270};
+    }
+    else if (cat_name==='marr_age_reasons') {
+      margin = {top: 60, right: 70, bottom: 60, left: 240};
+    }
+    else if (cat_name==='marr_prop_rep_who') {
+      margin = {top: 60, right: 60, bottom: 90, left: 195};
+    }
+    else if (cat_name==='marr_comm_local') {
+      margin = {top: 60, right: 100, bottom: 100, left: 180};
+    }
+    else if (cat_name==='educ_miss_why_f') { 
+      margin = {top: 60, right: 70, bottom: 60, left: 290};
+    }
+    else if (cat_name==='educ_miss_why_m') { 
+      margin = {top: 60, right: 70, bottom: 60, left: 135};
+    }
+    else if (cat_name==='absentism_rate_10') {
+      margin = {top: 70, right: 110, bottom: 90, left: 135};
+    }
     else {
       margin = {top: 50, right: 70, bottom: 90, left: 135};
     }
@@ -129,8 +156,38 @@ export default class CatBarChart extends React.Component {
     if (cat_name==='r1_plan_del' || cat_name==='r1_pref_del') {
       xAxisLabel = 'Percent of pregnancies';
     }
+    else if (cat_name==='chronicmiss_dum') {
+      xAxisLabel = 'Percent of enrolled boys or girls';
+    }
+    else if (cat_name==='marr_age') {
+      xAxisLabel = 'Age'
+    }
+    else if (cat_name==='absentism_rate_10') {
+      xAxisLabel = 'Percent of teachers';
+    }
+    else if (cat_name==='educ_miss_why_f') {
+      xAxisLabel = 'Percent of girls';
+    }
+    else if (cat_name==='educ_miss_why_m') {
+      xAxisLabel = 'Percent of boys';
+    }
     else {
       xAxisLabel = 'Percent of households';
+    }
+
+    let xAxisLabeldy = 0;
+    
+    if (cat_name==='marr_age') {
+      xAxisLabeldy = 45;
+    }
+    else if (cat_name==='all_kids_enrolled_cons' || cat_name==='chronicmiss_dum') {
+      xAxisLabeldy = 45;
+    }
+    else if (cat_name==='marr_age_why' || cat_name==='marr_age_reasons' || cat_name==='marr_prop_rep_who' || cat_name==='absentism_rate_10') {
+      xAxisLabeldy = 10;
+    }
+    else if (cat_name==='educ_miss_why_m' || cat_name==='educ_miss_why_f') {
+      xAxisLabeldy = 25;
     }
 
 
@@ -144,6 +201,7 @@ export default class CatBarChart extends React.Component {
     const x = d3.scale.scaleLinear()
       .rangeRound([0, width])
       .domain([0, maxX])
+
 
     const firstLetterY = y(data[0].indic_name)
     const secondLetterY = y(data[1].indic_name)
@@ -220,7 +278,7 @@ export default class CatBarChart extends React.Component {
                 <Text
                   fill={colours.black}
                   x={0}
-                  y={0}
+                  y={0 - xAxisLabeldy}
                   font="18px Arial"
                   alignment='center'
                 >

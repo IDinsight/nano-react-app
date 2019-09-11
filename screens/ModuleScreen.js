@@ -3,13 +3,20 @@ import { ScrollView, StyleSheet, View, List, Text, Picker, Modal, TouchableHighl
 import { Card, ListItem, Button } from 'react-native-elements';
 import { FlatGrid } from 'react-native-super-grid';
 import VcChart from '../components/VcChart';
+import WardChart from '../components/WardChart';
+import SchoolChart from '../components/SchoolChart';
+import PriGovSchoolChart from '../components/PriGovSchoolChart';
+import PriComSchoolChart from '../components/PriComSchoolChart';
+import SecGovSchoolChart from '../components/SecGovSchoolChart';
 import CatBarChart from '../components/CatBarChart';
+import GroupCatBarChart from '../components/GroupCatBarChart';
 import ReasonsChart from '../components/ReasonsChart';
 import {format as d3Format} from 'd3-format';
 import data from '../data/indicators.json';
 import stakeholders from '../data/stakeholders.json';
 import {Linking} from 'react-native';
 import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
+import * as Segment from 'expo-analytics-segment';
 
 
 export default class ModuleScreen extends React.Component {
@@ -23,6 +30,10 @@ export default class ModuleScreen extends React.Component {
       this.state = {
         selectedValue: data[moduleKey].categories.length > 0 ? data[moduleKey].categories[0].cat_name : null,
         vcModalVisible: false,
+        wardModalVisible: false,
+        priGovSchoolModalVisible: false,
+        priComSchoolModalVisible: false,
+        secGovSchoolModalVisible: false,
         reasonsModalVisible: false,
         chartData: [],
         appState: AppState.currentState,
@@ -31,6 +42,18 @@ export default class ModuleScreen extends React.Component {
 
   setVcModalVisible(visible) {
     this.setState({vcModalVisible: visible});
+  }
+  setWardModalVisible(visible) {
+    this.setState({wardModalVisible: visible});
+  }
+  setPriGovSchoolModalVisible(visible) {
+    this.setState({priGovSchoolModalVisible: visible});
+  }
+  setPriComSchoolModalVisible(visible) {
+    this.setState({priComSchoolModalVisible: visible});
+  }
+  setSecGovSchoolModalVisible(visible) {
+    this.setState({secGovSchoolModalVisible: visible});
   }
   setReasonsModalVisible(visible) {
     this.setState({reasonsModalVisible: visible});
@@ -55,7 +78,7 @@ export default class ModuleScreen extends React.Component {
   }
   showVcButton(item) {
 
-    if (item.values.vc.length>0) {
+    if (item.values.vc && item.values.vc.length>0) {
       return <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.customButton}
@@ -73,6 +96,83 @@ export default class ModuleScreen extends React.Component {
       }
   }
   
+  showWardButton(item) {
+
+    if (item.values.ward && item.values.ward.length>0) {
+      return <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.customButton}
+          onPress={() => {
+            this.setWardModalVisible(true);
+            this.setState({'chartData':item});
+          }}
+          >
+          <Text style={styles.customButtonText}>VIEW WARDS</Text>
+        </TouchableOpacity>
+      </View>;
+    }
+      else {
+        return;
+      }
+  }
+
+  showPriGovSchoolButton(item) {
+    if (item.values.school && item.values.school.values.length>0) {
+      return <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.customButton}
+          onPress={() => {
+            this.setPriGovSchoolModalVisible(true);
+            this.setState({'chartData':item});
+          }}
+          >
+          <Text style={styles.customButtonText}>VIEW GOVERNMENT PRIMARY SCHOOLS</Text>
+        </TouchableOpacity>
+      </View>;
+    }
+      else {
+        return;
+      }
+  }
+
+  showPriComSchoolButton(item) {
+    if (item.values.school && item.values.school.values.length>0) {
+      return <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.customButton}
+          onPress={() => {
+            this.setPriComSchoolModalVisible(true);
+            this.setState({'chartData':item});
+          }}
+          >
+          <Text style={styles.customButtonText}>VIEW COMMUNITY PRIMARY SCHOOLS</Text>
+        </TouchableOpacity>
+      </View>;
+    }
+      else {
+        return;
+      }
+  }
+
+  showSecGovSchoolButton(item) {
+    if (item.values.school && item.values.school.values.length>0) {
+      return <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.customButton}
+          onPress={() => {
+            this.setSecGovSchoolModalVisible(true);
+            this.setState({'chartData':item});
+          }}
+          >
+          <Text style={styles.customButtonText}>VIEW GOVERNMENT SECONDARY SCHOOLS</Text>
+        </TouchableOpacity>
+      </View>;
+    }
+      else {
+        return;
+      }
+  }
+
   showReasonsButton(item) {
 
     if (item.reasons && item.reasons.reasons_indicators.length>0) {
@@ -95,34 +195,90 @@ export default class ModuleScreen extends React.Component {
 
   generateStakeholderSubtitle(item) {
 
-    let line1 = '';
-    if (item.contact_person!=='' && item.contact_position!=='') {
-      line1 = item.contact_person + ', ' + item.contact_position;
+  
+    if (item.contact.length===0) {
+      return (
+        <View>
+          <Text style={styles.stakeholderSubtitleText}>Sectors: {item.app_categories.join(', ')}</Text>
+          <Text style={styles.stakeholderSubtitleText}></Text>
+          <Text style={styles.stakeholderSubtitleText}></Text>
+        </View>
+      );
     }
-    else if (item.contact_position==='') {
-      line1 = item.contact_person;
-    }
-    else if (item.contact_person==='') {
-      line1 = item.contact_position;
-    }
+    else {
 
     return <View>
-    <Text style={styles.stakeholderSubtitleText}>Sectors: {item.app_categories.join(', ')}</Text>
-    <Text style={styles.stakeholderSubtitleText}>{line1}</Text>
-    <Text onPress={()=>{Linking.openURL('tel:+'+item.contact_phone);}} style={styles.linkText}>{item.contact_phone==='' ? '' : ('+' + item.contact_phone)}</Text>
-    </View>;
+      <Text style={styles.stakeholderSubtitleText}>Sectors: {item.app_categories.join(', ')}</Text>
+
+      { 
+        item.contact.map((contact, i) => {
+
+          let line1 = '';
+
+          if (contact.contact_person!=='' && contact.contact_position!=='') {
+            line1 = contact.contact_person + ', ' + contact.contact_position;
+          }
+          else if (contact.contact_position==='') {
+            line1 = contact.contact_person;
+          }
+          else if (contact.contact_person==='') {
+            line1 = contact.contact_position;
+          }  
+          return (
+            <View>
+            <Text style={styles.stakeholderSubtitleText}>{line1}</Text>
+            <Text onPress={()=>{Linking.openURL('tel:+'+contact.contact_phone);}} style={styles.linkText}>{contact.contact_phone==='' ? '' : ('+' + contact.contact_phone)}</Text>
+            </View>
+          );
+        }) 
+      }
+
+      </View>;
+
+    }
+
+  }
+
+  generateStakeholderTitle(item) {
+
+    let title;
+    if (item.acronym!=='') {
+      title = item.organization + ' (' + item.acronym + ')';
+    }
+    else {
+      title = item.organization;
+    }
+
+    return title;
 
   }
 
   showPrecision(item) {
 
-    if (item.indic_name==='r1_hh_surveyed') {
+    const moduleKey = this.props.navigation.getParam('moduleKey');
+    if (item.indic_name==='r1_hh_surveyed' || moduleKey==='school_capacity' || moduleKey==='school_infrastructure') {
       return;
     }
       else {
         return <Text style={styles.precisionInfo}>Precision bounds: [{this.formatValue(item.indic_name,item.values.chiefdom.lower_bound,item.values.chiefdom.unit)}, {this.formatValue(item.indic_name,item.values.chiefdom.upper_bound,item.values.chiefdom.unit)}]</Text>;
       }
     
+  }
+
+  showVignette(item) {
+
+    const moduleKey = this.props.navigation.getParam('moduleKey');
+    if (item.indic_name==='educ_pay_should_female') {
+         return (
+          <View>
+          <Text style={styles.vignetteLabel}>Vignette:</Text>
+          <Text style={styles.vignetteText}>Imagine that a respected family in your community has one daughter and one son who are the same age and attend the same school. The family is now not able to access as much money as before and cannot afford the school fees for both of their children. They must decide if they should one child to school or neither child. Both children currently perform well at school. Skipping school at this stage will likely mean that they will fall behind and not complete all 12 grades.</Text>
+          </View>
+        )
+    }
+    else {
+      return;
+    }
   }
 
   componentDidMount() {
@@ -140,6 +296,10 @@ export default class ModuleScreen extends React.Component {
     ) {
       this.setVcModalVisible(false);
       this.setReasonsModalVisible(false);
+      this.setWardModalVisible(false);
+      this.setPriGovSchoolModalVisible(false);
+      this.setPriComSchoolModalVisible(false);
+      this.setSecGovSchoolModalVisible(false);
     }
     this.setState({appState: nextAppState});
   };
@@ -159,6 +319,7 @@ export default class ModuleScreen extends React.Component {
       elevation: 5,
     };
     const moduleKey = this.props.navigation.getParam('moduleKey', 'Module not found');
+    Segment.screen('Module Screen: ' + moduleKey)
     
     let pickerView;
     if (data[moduleKey].categories.length > 0) {
@@ -215,16 +376,27 @@ export default class ModuleScreen extends React.Component {
     
     let gridData
     let catBarData;
+    let groupCatBarData;
+    let schoolChallengesData;
 
-    if (moduleKey==='snapshot_of_the_chiefdom') {
+    if (moduleKey==='snapshot_of_the_chiefdom' || moduleKey==='marriage_beliefs_behaviours' || moduleKey==='education_beliefs_behaviours' || moduleKey==='teachers' || moduleKey==='school_capacity' || moduleKey==='school_infrastructure') {
       gridData = data[moduleKey]['indicators']['grid_data'];
-      catBarData = data[moduleKey]['indicators']['cat_bar_data'];
+      catBarData = data[moduleKey]['indicators']['cat_bar_data'].filter(function(d) { return d.display_type==='cat_bar'});
+      groupCatBarData = data[moduleKey]['indicators']['cat_bar_data'].filter(function(d) { return d.display_type==='group_cat_bar'});
+      schoolChallengesData = [];
     }
     if (moduleKey==='access_to_services' || moduleKey==='health_behaviours') {
       gridData = data[moduleKey]['indicators'][this.state.selectedValue]['grid_data'];
       catBarData = data[moduleKey]['indicators'][this.state.selectedValue]['cat_bar_data'];
+      groupCatBarData = [];
+      schoolChallengesData = [];
     }
-
+    if (moduleKey==='school_challenges') {
+      gridData = [];
+      catBarData = [];
+      groupCatBarData = [];
+      schoolChallengesData = data[moduleKey]['indicators']['grid_data'];
+    }
 
     return (
       <ScrollView style={styles.container}>
@@ -255,6 +427,107 @@ export default class ModuleScreen extends React.Component {
         <Modal
           animationType="slide"
           transparent={false}
+          visible={this.state.wardModalVisible}
+          onRequestClose={() => { this.setWardModalVisible(!this.state.wardModalVisible);}}
+          >
+          <View style={{marginTop: 22}}>
+            <View style={styles.modalButtonContainer}>
+              <TouchableOpacity
+                style={styles.customButton}
+                onPress={() => {
+                  this.setWardModalVisible(!this.state.wardModalVisible);
+                }}
+                >
+                <Text style={styles.customButtonText}>CLOSE</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.chartTitleContainer}>
+            <Text style={styles.chartTitle}>{this.state.chartData.indic_label}</Text>
+            </View>
+            <WardChart data={this.state.chartData}/>
+          </View>
+        </Modal>
+
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.priGovSchoolModalVisible}
+          onRequestClose={() => { this.setPriGovSchoolModalVisible(!this.state.priGovSchoolModalVisible);}}
+          >
+          <View style={{marginTop: 22}}>
+            <View style={styles.modalButtonContainer}>
+              <TouchableOpacity
+                style={styles.customButton}
+                onPress={() => {
+                  this.setPriGovSchoolModalVisible(!this.state.priGovSchoolModalVisible);
+                }}
+                >
+                <Text style={styles.customButtonText}>CLOSE</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.chartTitleContainer}>
+            <Text style={styles.chartTitle}>{this.state.chartData.values.school ? this.state.chartData.values.school.indic_label : ''}</Text>
+            </View>
+            <PriGovSchoolChart data={this.state.chartData}/>
+          </View>
+        </Modal>
+
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.priComSchoolModalVisible}
+          onRequestClose={() => { this.setPriComSchoolModalVisible(!this.state.priComSchoolModalVisible);}}
+          >
+          <View style={{marginTop: 22}}>
+            <View style={styles.modalButtonContainer}>
+              <TouchableOpacity
+                style={styles.customButton}
+                onPress={() => {
+                  this.setPriComSchoolModalVisible(!this.state.priComSchoolModalVisible);
+                }}
+                >
+                <Text style={styles.customButtonText}>CLOSE</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.chartTitleContainer}>
+            <Text style={styles.chartTitle}>{this.state.chartData.values.school ? this.state.chartData.values.school.indic_label : ''}</Text>
+            </View>
+            <PriComSchoolChart data={this.state.chartData}/>
+          </View>
+        </Modal>
+
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.secGovSchoolModalVisible}
+          onRequestClose={() => { this.setSecGovSchoolModalVisible(!this.state.secGovSchoolModalVisible);}}
+          >
+          <View style={{marginTop: 22}}>
+            <View style={styles.modalButtonContainer}>
+              <TouchableOpacity
+                style={styles.customButton}
+                onPress={() => {
+                  this.setSecGovSchoolModalVisible(!this.state.secGovSchoolModalVisible);
+                }}
+                >
+                <Text style={styles.customButtonText}>CLOSE</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.chartTitleContainer}>
+            <Text style={styles.chartTitle}>{this.state.chartData.values.school ? this.state.chartData.values.school.indic_label : ''}</Text>
+            </View>
+            <SecGovSchoolChart data={this.state.chartData}/>
+          </View>
+        </Modal>
+
+
+        <Modal
+          animationType="slide"
+          transparent={false}
           visible={this.state.reasonsModalVisible}
           onRequestClose={() => { this.setReasonsModalVisible(!this.state.reasonsModalVisible);}}
           >
@@ -278,7 +551,7 @@ export default class ModuleScreen extends React.Component {
         
         <View style={styles.moduleContainer}>
           <Text style={styles.titleText}>{data[moduleKey].name}</Text> 
-          <Text style={styles.moduleDetailText}>Collected April 2019</Text> 
+          <Text style={styles.moduleDetailText}>Collected {data[moduleKey].collection_date}</Text> 
         {pickerView}
         </View>
         
@@ -292,10 +565,33 @@ export default class ModuleScreen extends React.Component {
           renderItem={({ item, index }) => (
             <View style={[styles.itemContainer,shadowStyle]}>
               <Text style={styles.itemName}>{item.indic_label}</Text>
+              {this.showVignette(item)}
               <Text style={styles.itemValue}>{this.formatValue(item.indic_name,item.values.chiefdom.estimate,item.values.chiefdom.unit)}</Text>
               {this.showPrecision(item)}
               {this.showVcButton(item)}
+              {this.showWardButton(item)}
+              {this.showPriGovSchoolButton(item)}
+              {this.showPriComSchoolButton(item)}
+              {this.showSecGovSchoolButton(item)}
               {this.showReasonsButton(item)}
+            </View>
+          )}
+        />
+
+        <FlatGrid
+          itemDimension={400}
+          items={schoolChallengesData}
+          style={styles.challengesGridView}
+          // staticDimension={300}
+          // fixed
+          spacing={25}
+          renderItem={({ item, index }) => (
+            <View style={[styles.itemContainer,shadowStyle]}>
+              <Text style={styles.challengesSchoolName}>{item.school_name}</Text>
+              <Text style={styles.challengesIndiclabel}>{item.indic_label}</Text>
+              <Text style={styles.challengesTextValue}>1. {item.values.challenge1}</Text>
+              <Text style={styles.challengesTextValue}>2. {item.values.challenge2}</Text>
+              <Text style={styles.challengesTextValue}>3. {item.values.challenge3}</Text>
             </View>
           )}
         />
@@ -307,6 +603,19 @@ export default class ModuleScreen extends React.Component {
                 <View key={i} style={[styles.catBarContainer,shadowStyle]}>
                   <Text style={styles.itemName}>{item.cat_label}</Text>
                     <CatBarChart data={item}/>
+                </View>
+              );
+          })
+        }
+        </View>
+
+        <View style={styles.catBarSection}>
+        {
+          groupCatBarData.map((item, i) => {
+            return (
+                <View key={i} style={[styles.catBarContainer,shadowStyle]}>
+                  <Text style={styles.itemName}>{item.cat_label}</Text>
+                    <GroupCatBarChart data={item}/>
                 </View>
               );
           })
@@ -392,6 +701,11 @@ const styles = ScaledSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  challengesGridView: {
+    marginTop: '-10@vs',
+    flex: 1,
+    backgroundColor: '#fff',
+  },
   itemContainer: {
     marginTop:'5@vs',
     padding: '20@ms',
@@ -406,6 +720,33 @@ const styles = ScaledSheet.create({
   itemValue: {
     paddingTop:'10@vs',
     fontSize: '36@ms',
+  },
+  vignetteLabel: {
+    color: 'rgba(96,100,109, 1)',
+    paddingTop:'10@vs',
+    fontSize: '14@ms',
+    paddingBottom:'10@vs',
+  },
+  vignetteText: {
+    color: 'rgba(96,100,109, 1)',
+    fontSize: '14@ms',
+    paddingBottom:'10@vs',
+    fontStyle: 'italic',
+  },
+  challengesSchoolName: {
+    paddingTop:'0@vs',
+    fontSize: '18@ms',
+  },
+  challengesIndiclabel: {
+    paddingTop:'10@vs',
+    fontSize: '14@ms',
+    paddingBottom:'10@vs',
+    fontStyle: 'italic',
+  },
+  challengesTextValue: {
+    color: 'rgba(96,100,109, 1)',
+    fontSize: '14@ms',
+    lineHeight: '18@ms',
   },
   precisionInfo: {
     paddingTop:'10@vs',

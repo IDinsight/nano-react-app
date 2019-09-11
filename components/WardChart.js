@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ART, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, View, ART, Dimensions, TouchableWithoutFeedback, AppState } from 'react-native';
 
 const {
   Surface,
@@ -43,8 +43,17 @@ const colours = {
   brown: 'brown'
 }
 
+// const data = [
+//   {frequency: 5, letter: 'a'},
+//   {frequency: 6, letter: 'b'},
+//   {frequency: 4, letter: 'c'},
+//   {frequency: 1, letter: 'd'},
+//   {frequency: 2, letter: 'e'},
+//   {frequency: 3, letter: 'f'}
+// ];
 
-export default class ReasonsChart extends React.Component {
+
+export default class WardChart extends React.Component {
 
   constructor(props) {
     super(props);
@@ -78,12 +87,16 @@ export default class ReasonsChart extends React.Component {
       f = d3Format(".0%");
       return f(value)
     }
+    else if (name==='hh_surveyed') {
+      f = d3Format("d");
+      return f(value);
+    }
     else {
       f = d3Format(".1f");
       return f(value)
     }
   }
-  
+
   formatLabel(name,value,unit) {
     if (unit==='%') {
       f = d3Format(".1%");
@@ -99,34 +112,34 @@ export default class ReasonsChart extends React.Component {
     }
   }
 
-  getLabeldy(name) {
-    if (name==="Reasons households gave for choosing to pay for the daughter's education in the vignette") {
-      return -50;
+  getCiColor(vc_code, diff_from_others) {
+    if (vc_code === 0 || diff_from_others === 0) {
+      return 'rgb(200,200,200)';
     }
-    else {
-      return -35
+
+    else if ( diff_from_others === 1) {
+      return '#4088d5';
     }
   }
 
   render() {
     const screen = Dimensions.get('window');
-    let margin = {top: 90, right: 55, bottom: 300, left: 300};
-
-    const cat_name = this.props.data.reasons.reasons_label;
-    
-    if (cat_name==="Reasons households gave for choosing to pay for the daughter's education in the vignette") {
-      margin = {top: 110, right: 55, bottom: 200, left: 400};
-    }
-
-    const width = screen.width - margin.left - margin.right;
-    const height = screen.height - margin.top - margin.bottom;
-    const data = this.props.data.reasons.reasons_indicators;
-    const unit = this.props.data.reasons.unit;
-
+    const margin = {top: 175, right: 25, bottom: 300, left: 220}
+    const width = screen.width - margin.left - margin.right
+    const height = screen.height - margin.top - margin.bottom
+    const data = [{'ward_code':0,'ward_name':'Chiefdom','estimate':this.props.data.values.chiefdom.estimate,'lower_bound':this.props.data.values.chiefdom.lower_bound,'upper_bound':this.props.data.values.chiefdom.upper_bound}].concat(this.props.data.values.ward);
+    const unit = this.props.data.values.chiefdom.unit;
+    const indic_name = this.props.data.indic_name;
     let xAxisLabel;
 
-    if (cat_name==='r1_literacy_test') {
+    if (indic_name==='r1_literacy_test') {
       xAxisLabel = 'Percent of respondents';
+    }
+    else if (indic_name==='r1_pri_dry_time_hr_w1' || indic_name==='r1_pri_rainy_time_hr_w1' || indic_name==='r1_sec_dry_time_hr_w1' || indic_name==='r1_sec_rainy_time_hr_w1' || indic_name==='r1_high_dry_time_hr_w1' || indic_name==='r1_high_rainy_time_hr_w1' || indic_name==='r1_hea_dry_time_hr_w1' || indic_name==='r1_hea_rainy_time_hr_w1') {
+      xAxisLabel = 'Travel time in hours';
+    }
+    else if (indic_name==='teacher_male' | indic_name==='contract_paid') {
+      xAxisLabel = 'Percent of teachers'
     }
     else {
       xAxisLabel = 'Percent of households';
@@ -135,7 +148,7 @@ export default class ReasonsChart extends React.Component {
     const y = d3.scale.scaleBand()
       .rangeRound([0, height])
       .padding(0.1)
-      .domain(data.map(d => d.indic_name))
+      .domain(data.map(d => d.ward_code))
 
     const maxX = max(data, d => d.upper_bound*1.2)
 
@@ -143,9 +156,9 @@ export default class ReasonsChart extends React.Component {
       .rangeRound([0, width])
       .domain([0, maxX])
 
-    const firstLetterY = y(data[0].indic_name)
-    const secondLetterY = y(data[1].indic_name)
-    const lastLetterY = y(data[data.length - 1].indic_name)
+    const firstLetterY = y(data[0].ward_code)
+    const secondLetterY = y(data[1].ward_code)
+    const lastLetterY = y(data[data.length - 1].ward_code)
     const labelDy = (secondLetterY - firstLetterY) / 2
 
     const leftAxis = [lastLetterY + labelDy, firstLetterY - labelDy]
@@ -153,6 +166,11 @@ export default class ReasonsChart extends React.Component {
     const leftAxisD = d3.shape.line()
       .y(d => d)
       .x(() => 0)
+      (leftAxis)
+
+    const chiefdomLineD = d3.shape.line()
+      .y(d => d)
+      .x(() => x(this.props.data.values.chiefdom.estimate))
       (leftAxis)
 
     const bottomAxis = ticks(0, maxX, 5)
@@ -168,35 +186,45 @@ export default class ReasonsChart extends React.Component {
 
     const xFormat = d3Format(".1f");
 
-    let xAxisLabeldy = 0;
+    let xAxisLabeldy = 45;
     
-    if (cat_name==="Reasons households gave for choosing to pay for the daughter's education in the vignette") {
-      xAxisLabeldy = 150;
-    }
 
     return(
       <View>
       <Surface width={screen.width} height={screen.height}>
+      <Group x={50} y={35}>
+          <Text
+              y={0}
+              x={0}
+              fill={colours.black}
+              font="18px Arial"
+              alignment="left"
+            >
+            Note: Blue confidence interval bars mean the value is different from the chiefdom average
+          </Text>
+      </Group>
       <Group x={margin.left} y={margin.top}>
+
         <Group x={0} y={0}>
           <Group key={-1}>
             <Shape d={leftAxisD} stroke={colours.black} key="-1"/>
+            <Shape d={chiefdomLineD} stroke={'rgb(200,200,200'} key="-2"/>
             {
             data.map((d, i) =>(
               <Group
-                y={y(d.indic_name)}
+                y={y(d.ward_code)}
                 x={0}
                 key={i + 1}
               >
                 <Shape d={this.drawLine(-notch, 0)} stroke={colours.black}/>
                 <Text
-                  y={-15}
-                  x={-15}
+                  y={-12}
+                  x={-9}
                   fill={colours.black}
                   font="24px Arial"
                   alignment="right"
                 >
-                  {d.indic_label + emptySpace}
+                  {d.ward_name + emptySpace}
                 </Text>
               </Group>
             ))
@@ -215,7 +243,7 @@ export default class ReasonsChart extends React.Component {
                   font="20px Arial"
                   alignment='center'
                 >
-                  {this.formatValue(cat_name,d,unit)}
+                  {this.formatValue(indic_name,d,unit)}
                 </Text>
               </Group>
             ))
@@ -224,7 +252,7 @@ export default class ReasonsChart extends React.Component {
                 <Text
                   fill={colours.black}
                   x={0}
-                  y={-20 - xAxisLabeldy}
+                  y={0 - xAxisLabeldy}
                   font="24px Arial"
                   alignment='center'
                 >
@@ -235,11 +263,11 @@ export default class ReasonsChart extends React.Component {
           {
           data.map((d, i) => (
             
-            <Group x={x(d.lower_bound < 0 ? 0 : d.lower_bound)} y={y(d.indic_name)} key={i} >
+            <Group x={x(d.lower_bound < 0 ? 0 : d.lower_bound)} y={y(d.ward_code)} key={i} >
               <Shape
                 d={this.drawLine(x(d.upper_bound - (d.lower_bound < 0 ? 0 : d.lower_bound)),0)}
                 strokeWidth={3}
-                stroke={'rgb(200,200,200'}
+                stroke={this.getCiColor(d.vc_code,d.diff_from_others)}
               >
               </Shape>
             </Group>
@@ -249,7 +277,7 @@ export default class ReasonsChart extends React.Component {
           {
           data.map((d, i) => (
             
-            <Group x={x(d.estimate)} y={y(d.indic_name)} key={i} >
+            <Group x={x(d.estimate)} y={y(d.ward_code)} key={i} >
               <Shape
                 d={this.drawCircle(y.bandwidth())}
                 fill={'#4088d5'}
@@ -258,13 +286,14 @@ export default class ReasonsChart extends React.Component {
               <Text
                 fill={colours.black}
                 x={0}
-                y={this.getLabeldy(cat_name)}
+                y={-35}
                 font="20px Arial"
                 alignment='center'
               >
-                {this.formatLabel(cat_name,d.estimate,unit)}
+                {this.formatLabel(indic_name,d.estimate,unit)}
 
               </Text>
+
             </Group>
           ))
           }
@@ -281,7 +310,7 @@ const styles = {
     margin: 20,
   },
   label: {
-    fontSize: 12,
+    fontSize: 15,
     marginTop: 5,
     fontWeight: 'normal',
   }

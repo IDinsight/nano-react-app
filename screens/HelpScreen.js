@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, View, Text } from 'react-native';
 import {Linking} from 'react-native'
 import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
+import * as Segment from 'expo-analytics-segment';
 
 export default class HelpScreen extends React.Component {
   static navigationOptions = {
@@ -11,6 +12,7 @@ export default class HelpScreen extends React.Component {
   };
 
   render() {
+    Segment.screen('Help Screen');
     return (
       <ScrollView style={styles.container}>
         <View style={styles.getStartedContainer}>

@@ -53,7 +53,7 @@ const colours = {
 // ];
 
 
-export default class VcChart extends React.Component {
+export default class PriGovSchoolChart extends React.Component {
 
   constructor(props) {
     super(props);
@@ -87,9 +87,17 @@ export default class VcChart extends React.Component {
       f = d3Format(".0%");
       return f(value)
     }
-    else if (name==='hh_surveyed') {
+    else if (name==='hh_surveyed' || name==='cap_payment' || name==='cap_space' || name==='teach_count_check' || name==='inf_blocks' || name==='num_improved_floors' || name==='num_improved_walls' || name==='num_roofs_weather_res') {
       f = d3Format("d");
       return f(value);
+    }
+    else if (name==='room_elec') {
+      if (value===0) {
+        return 'No';
+      }
+      else if (value===1) {
+        return 'Yes';
+      }
     }
     else {
       f = d3Format(".1f");
@@ -97,65 +105,101 @@ export default class VcChart extends React.Component {
     }
   }
 
-  formatLabel(name,value,unit) {
+  formatLabel(name,value,unit, total_blocks) {
     if (unit==='%') {
       f = d3Format(".1%");
       return f(value)
     }
-    else if (name==='hh_surveyed') {
+    else if (name==='hh_surveyed' || name==='cap_payment' || name==='cap_space' || name==='teach_count_check' || name==='inf_blocks') {
       f = d3Format("d");
       return f(value);
+    }
+    else if (name==='room_elec') {
+      return ''
+    }
+    else if (name==='num_improved_floors' || name==='num_improved_walls' || name==='num_roofs_weather_res') {
+      f = d3Format("d");
+      return f(value) + ' (total blocks: ' + f(total_blocks) + ')';
     }
     else {
       f = d3Format(".1f");
       return f(value)
-    }
-  }
-
-  getCiColor(vc_code, diff_from_others) {
-    if (vc_code === 0 || diff_from_others === 0) {
-      return 'rgb(200,200,200)';
-    }
-
-    else if ( diff_from_others === 1) {
-      return '#4088d5';
     }
   }
 
   render() {
     const screen = Dimensions.get('window');
-    const margin = {top: 150, right: 25, bottom: 325, left: 175}
+    let margin = {top: 150, right: 25, bottom: 300, left: 190}
+
+    const data = this.props.data.values.school.values.filter(function(d) { return d.school_type==='Government: Primary'});
+    const unit = this.props.data.values.school.unit;
+    const indic_name = this.props.data.indic_name;
+    
+    if (indic_name==='housing_cap_per' || indic_name==='per_room_board' || indic_name==='per_room_desks' || indic_name==='per_room_sit' || indic_name==='per_washing_nearby' || indic_name==='per_washing_nearby_soap' || indic_name==='per_washing_nearby_water' || indic_name==='vip_flush_per') {
+        margin = {top: 150, right: 50, bottom: 300, left: 190}
+    }
+    
     const width = screen.width - margin.left - margin.right
     const height = screen.height - margin.top - margin.bottom
-    const data = [{'vc_code':0,'vc_name':'Chiefdom','estimate':this.props.data.values.chiefdom.estimate,'lower_bound':this.props.data.values.chiefdom.lower_bound,'upper_bound':this.props.data.values.chiefdom.upper_bound}].concat(this.props.data.values.vc);
-    const unit = this.props.data.values.chiefdom.unit;
-    const indic_name = this.props.data.indic_name;
+
     let xAxisLabel;
 
-    if (indic_name==='r1_literacy_test') {
-      xAxisLabel = 'Percent of respondents';
+    if (indic_name==='enrolled_per_f') {
+      xAxisLabel = 'Percent girls';
     }
-    else if (indic_name==='r1_pri_dry_time_hr_w1' || indic_name==='r1_pri_rainy_time_hr_w1' || indic_name==='r1_sec_dry_time_hr_w1' || indic_name==='r1_sec_rainy_time_hr_w1' || indic_name==='r1_high_dry_time_hr_w1' || indic_name==='r1_high_rainy_time_hr_w1' || indic_name==='r1_hea_dry_time_hr_w1' || indic_name==='r1_hea_rainy_time_hr_w1') {
-      xAxisLabel = 'Travel time in hours';
+    else if (indic_name==='vip_flush_per') {
+      xAxisLabel = 'Percent of facilities';
     }
-    else {
-      xAxisLabel = 'Percent of households';
+    else if (indic_name==='cap_payment' || indic_name==='cap_space' || indic_name==='r1_sec_dry_time_hr_w1' || indic_name==='r1_sec_rainy_time_hr_w1' || indic_name==='r1_high_dry_time_hr_w1' || indic_name==='r1_high_rainy_time_hr_w1' || indic_name==='r1_hea_dry_time_hr_w1' || indic_name==='r1_hea_rainy_time_hr_w1') {
+      xAxisLabel = 'Total children';
+    }
+    else if (indic_name==='housing_cap_per') {
+      xAxisLabel = 'Percent of teachers';
+    }
+    else if (indic_name==='teach_count_check') {
+      xAxisLabel = 'Total teachers';
+    }
+    else if (indic_name==='teacher_student_ratio') {
+      xAxisLabel = 'Average students per teacher';
+    }
+    else if (indic_name==='room_elec') {
+      xAxisLabel = '';
+    }
+    else if (indic_name==='inf_blocks' || indic_name==='num_improved_floors' || indic_name==='num_improved_walls' || indic_name==='num_roofs_weather_res') {
+      xAxisLabel = 'Total blocks';
+    }
+    else if (indic_name==='per_room_board' || indic_name==='per_room_desks' || indic_name==='per_room_sit') {
+      xAxisLabel = 'Percent of classrooms';
+    }
+    else if (indic_name==='per_washing_nearby') {
+      xAxisLabel = 'Percent of toilet facilities';
+    }
+    else if (indic_name==='per_washing_nearby_soap' || indic_name==='per_washing_nearby_water') {
+      xAxisLabel = 'Percent of handwashing facilities';
+    }
+    else if (indic_name==='student_toilet_ratio') {
+      xAxisLabel = 'Average students'
     }
 
     const y = d3.scale.scaleBand()
       .rangeRound([0, height])
       .padding(0.1)
-      .domain(data.map(d => d.vc_code))
+      .domain(data.map(d => d.school_code))
 
-    const maxX = max(data, d => d.upper_bound*1.2)
+    let maxX = max(data, d => d.estimate*1.2)
+
+    if (unit==='%' && maxX>1) {
+      maxX=1;
+    }
 
     const x = d3.scale.scaleLinear()
       .rangeRound([0, width])
       .domain([0, maxX])
 
-    const firstLetterY = y(data[0].vc_code)
-    const secondLetterY = y(data[1].vc_code)
-    const lastLetterY = y(data[data.length - 1].vc_code)
+
+    const firstLetterY = y(data[0].school_code)
+    const secondLetterY = y(data[1].school_code)
+    const lastLetterY = y(data[data.length - 1].school_code)
     const labelDy = (secondLetterY - firstLetterY) / 2
 
     const leftAxis = [lastLetterY + labelDy, firstLetterY - labelDy]
@@ -165,17 +209,18 @@ export default class VcChart extends React.Component {
       .x(() => 0)
       (leftAxis)
 
-    const chiefdomLineD = d3.shape.line()
-      .y(d => d)
-      .x(() => x(this.props.data.values.chiefdom.estimate))
-      (leftAxis)
+    let bottomAxis = ticks(0, maxX, 5)
 
-    const bottomAxis = ticks(0, maxX, 5)
+    if (indic_name==='room_elec') {
+      bottomAxis = ticks(0, 1, 2)
+    }
 
-    const bottomAxisD = d3.shape.line()
+    let bottomAxisD = d3.shape.line()
       .y(() => height - labelDy - 2)
       .x(d => x(d))
       (bottomAxis)
+
+
 
     const notch = 5;
     const labelDistance = 6;
@@ -183,6 +228,7 @@ export default class VcChart extends React.Component {
 
     const xFormat = d3Format(".1f");
 
+    let xAxisLabeldy = 25;
 
     return(
       <View>
@@ -192,21 +238,20 @@ export default class VcChart extends React.Component {
               y={0}
               x={0}
               fill={colours.black}
-              font="18px Arial"
+              font="22px Arial"
               alignment="left"
             >
-            Note: Blue confidence interval bars mean the value is different from the chiefdom average
+            Note: "Pri" used in school names is short for "Primary"
           </Text>
       </Group>
       <Group x={margin.left} y={margin.top}>
         <Group x={0} y={0}>
           <Group key={-1}>
             <Shape d={leftAxisD} stroke={colours.black} key="-1"/>
-            <Shape d={chiefdomLineD} stroke={'rgb(200,200,200'} key="-2"/>
             {
             data.map((d, i) =>(
               <Group
-                y={y(d.vc_code)}
+                y={y(d.school_code)}
                 x={0}
                 key={i + 1}
               >
@@ -218,7 +263,7 @@ export default class VcChart extends React.Component {
                   font="24px Arial"
                   alignment="right"
                 >
-                  {d.vc_name + emptySpace}
+                  {d.school_name + emptySpace}
                 </Text>
               </Group>
             ))
@@ -246,7 +291,7 @@ export default class VcChart extends React.Component {
                 <Text
                   fill={colours.black}
                   x={0}
-                  y={0}
+                  y={0 - xAxisLabeldy}
                   font="24px Arial"
                   alignment='center'
                 >
@@ -254,24 +299,12 @@ export default class VcChart extends React.Component {
                 </Text>
             </Group>
           </Group>
-          {
-          data.map((d, i) => (
-            
-            <Group x={x(d.lower_bound < 0 ? 0 : d.lower_bound)} y={y(d.vc_code)} key={i} >
-              <Shape
-                d={this.drawLine(x(d.upper_bound - (d.lower_bound < 0 ? 0 : d.lower_bound)),0)}
-                strokeWidth={3}
-                stroke={this.getCiColor(d.vc_code,d.diff_from_others)}
-              >
-              </Shape>
-            </Group>
-          ))
-          }
+          
 
           {
           data.map((d, i) => (
             
-            <Group x={x(d.estimate)} y={y(d.vc_code)} key={i} >
+            <Group x={x(d.estimate)} y={y(d.school_code)} key={i} >
               <Shape
                 d={this.drawCircle(y.bandwidth())}
                 fill={'#4088d5'}
@@ -284,7 +317,7 @@ export default class VcChart extends React.Component {
                 font="20px Arial"
                 alignment='center'
               >
-                {this.formatLabel(indic_name,d.estimate,unit)}
+                {this.formatLabel(indic_name,d.estimate,unit,d.block_total)}
 
               </Text>
 

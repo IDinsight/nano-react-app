@@ -14,6 +14,8 @@ import {
   Text
 } from 'react-native';
 import { scale, verticalScale, moderateScale, ScaledSheet } from 'react-native-size-matters';
+import * as Segment from 'expo-analytics-segment';
+import segmentKeys from '../secrets/segment_keys.json';
 
 export default class SignInScreen extends React.Component {
   static navigationOptions = {
@@ -78,7 +80,18 @@ export default class SignInScreen extends React.Component {
     if ((this.state.username==='wmukobela' && this.state.password==='nano123') || 
       (this.state.username==='testuser' && this.state.password==='idinsight123'))
     {
+
+      Segment.initialize({ 'androidWriteKey': segmentKeys.android_write_key })
+      
+      if (this.state.username==='wmukobela') {
+        Segment.identify(1);
+      }
+      else if (this.state.username==='testuser') {
+        Segment.identify(2);
+      }
+
       await AsyncStorage.setItem('userToken', 'abc');
+      
       this.props.navigation.navigate('App');
     }
       else {
